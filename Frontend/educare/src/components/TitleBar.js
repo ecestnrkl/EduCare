@@ -1,7 +1,7 @@
 export default function TitleBar() {
     return (
-        <div>
-            <p>Leere Seite</p>
-        </div>
+        <titlebar>
+            <p>EduCare</p>
+        </titlebar>
     )
   }
