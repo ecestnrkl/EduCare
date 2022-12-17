@@ -6,6 +6,24 @@
   color: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* unsicher wegen KlassenNamen, nochmal prüfen */
+.Calendar,
+.ReportsPage,
+.LandingPage,
+.Settings {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 /* Ab hier ist für TitleBar */
 titlebar {
   background-color: rgb(38, 89, 241);

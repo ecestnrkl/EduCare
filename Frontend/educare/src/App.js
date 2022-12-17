@@ -1,17 +1,21 @@
 import './App.css';
-import LandingPage from './page/LandingPage';
-import HomePage from './page/HomePage';
-import MenuPage from './page/MenuPage'; 
-import ReportsPage from './page/ReportsPage'; 
+import React from 'react';
+import MenuPage from './pages/MenuPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ReportsPage from './pages/ReportsPage';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage/>
-      <HomePage/>
-      <MenuPage/>
-      <ReportsPage/>
-    </div>
+    <Router>
+        <MenuPage />
+        <Switch>
+          <Route path='/' exact component={HomePage} />
+          <Route path='/ReportsPage' exact component={ReportsPage} />
+          <Route path='/LandingPage' exact component={LandingPage} />
+        </Switch>
+      </Router>
   );
 }
 
