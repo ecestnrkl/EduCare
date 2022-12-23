@@ -1,0 +1,129 @@
+/* Handy Ansicht*/
+
+.settings {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+}
+
+
+/* Ab hier Settings Inhalt */
+.TextBox {
+    padding: 20px;
+    background-color: rgb(166, 211, 255);
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 15px;
+    width: 380px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* SprachOption select für Sprachbutton */
+.TextBox input, .SprachOption select {
+    float: right;
+    padding-right: 20px;
+    position: relative;
+    width: 165px;
+}
+
+.TextBox .Box, .SprachOption select  {
+    padding-bottom: 15px;
+}
+
+.Box input, .SprachOption select {
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    height: 22px;
+}
+
+/* Box1 und Box2 Trenner */
+.Box1 {
+    padding-bottom: 60px;
+}
+
+
+/* Save Button */
+.save{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.save button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.save button:hover {
+    background-color: #F7B87B;
+    border: none;
+    transition: 200ms;
+}
+
+.TextBox1 button:hover {
+    background-color: royalblue;
+}
+
+
+
+
+/*  MEDIA Laptop Ansicht  */
+
+@media only screen and (max-width: 400px) {
+    .settings {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 50px;
+
+        margin-bottom: 50px;
+        margin-top: 50px;
+        font-family: "Montserrat", sans-serif;
+
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        /* transition: 100ms; */
+    }
+}
+
+
+@media (min-width: 717px) {
+    .TextBox{
+    column-count: 2;
+    column-gap: 90px;
+    column-width: auto;
+    
+    display: block;    
+    padding: 30px;  
+      
+    background-color: rgb(166, 211, 255);
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 15px;
+    
+    width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.TextBox input, .SprachOption select {
+    margin: 2px;
+}
+}
+
