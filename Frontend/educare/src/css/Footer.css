@@ -1,4 +1,94 @@
-.Footer.css {
-    text-align: center;
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(38, 89, 241);
+  padding: 7px;
+  color: white;
+  height: 150px;
   }
+
+  .footer-card{
+    text-align: left;
+    display: block;
+    flex-direction: column;
+  }
+
+  .footer-input {
+    margin: 0 auto;
+    color: #cacdd2;
+    font-size: 16px;
+    padding: auto;
+  }
+
+  nav a {
+    text-decoration: none;
+    display: block;
+    padding: 2px;
+  }
+
+  nav {
+    background: transparent;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-input:hover {
+    color: rgb(50, 62, 131);
+    transition: 0.3s ease-out;
+  }
+
+
+ 
+  /*
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: left;
+    background-color: rgb(38, 89, 241);
+    padding: 7px;
+    color: white;
+    height: 150px;
+  } 
+  
+  .Footer-Bottom {
+    position: absolute;
+    bottom: 10px;
+    grid-template-columns: 70px 70px 70px;
+    padding-left: 15px;
+    width: fit-content;
+    color: #cacdd2;
+    display: grid;
+  }
+  
+  Damit Link nicht unterstrichen ist
+  .Footer-Bottom p a {
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    word-spacing: 2px;
+  }
+  
+  .Impressum {
+    margin: 0 auto;
+    color: #cacdd2;
+    font-size: 12px;
+    padding: auto;
+  }
+  
+  .Kontakt {
+    margin: 0 auto;
+    color: #cacdd2;
+    font-size: 12px;
+    padding: auto;
+  }
+  
+  .ÜberUns {
+    margin: 0 auto;
+    color: #cacdd2;
+    font-size: 12px;
+    padding: auto;
+  } */
   

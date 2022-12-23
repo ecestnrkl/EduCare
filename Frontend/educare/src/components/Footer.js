@@ -3,17 +3,19 @@ import '../css/Footer.css';
 export default function Footer() {
     return (
         <footer>
-            <div className="Footer-Bottom">
-                <div className="Impressum">
+            <nav>
+                <div className="footer-card">
+                <div className="footer-input">
                     <p> <a href="https://www.instagram.com/" title="socials" target="_blank" className="LinkColor" rel="noreferrer">Impressum</a></p>
                 </div>
-                <div className="Kontakt">
+                <div className="footer-input">
                     <p> <a href="https://www.instagram.com/" title="Contact" target="_blank" className="LinkColor" rel="noreferrer">Kontakt</a></p>
                 </div>
-                <div className="ÜberUns">
+                <div className="footer-input">
                     <p> <a href="https://www.instagram.com/" title="policy" target="_blank" className="LinkColor" rel="noreferrer">Über uns</a></p>
                 </div>
-            </div>
+                </div>
+            </nav>
 
             
         </footer>

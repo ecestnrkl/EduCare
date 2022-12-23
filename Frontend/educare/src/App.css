@@ -24,8 +24,8 @@
   font-size: 3rem;
 }
 
-/* Ab hier ist für TitleBar */
-titlebar {
+/* Ab hier ist für TitleBar 
+header {
   background-color: rgb(38, 89, 241);
   display: flex;
   flex-direction: column;
@@ -36,9 +36,7 @@ titlebar {
   color: white;
 }
 
-
-
-/* Ab hier ist für Footer */
+Ab hier ist für Footer
 footer {
   position: fixed;
   width: 100%;
@@ -60,7 +58,7 @@ footer {
   display: grid;
 }
 
-/* Damit Link nicht unterstrichen ist */
+/* Damit Link nicht unterstrichen ist
 .Footer-Bottom p a {
   color: #ffffff;
   font-size: 12px;
@@ -87,4 +85,5 @@ footer {
   color: #cacdd2;
   font-size: 12px;
   padding: auto;
-}
+} 
+*/
