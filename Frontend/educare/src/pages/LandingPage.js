@@ -1,4 +1,4 @@
-import '../css/LandingPage.css';
+import '../components/LandingPage/LandingPage.css';
 import React from 'react';
 
 export default function LandingPage() {

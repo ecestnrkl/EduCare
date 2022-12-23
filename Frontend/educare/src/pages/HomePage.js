@@ -1,9 +1,8 @@
-import '../css/HomePage.css';
+import '../components/HomePage/HomePage.css';
 import ReactDOM from "react-dom/client";
-import TitleBar from "../components/TitleBar";
-import Footer from "../components/Footer";
-import HomePageContent from "../components/content/HomePageContent";
-import React from 'react';
+import TitleBar from "../components/TitleBar/TitleBar";
+import Footer from "../components/Footer/Footer";
+import HomePageContent from "../components/HomePage/HomePageContent";
 
 function HomePage() {
   return (

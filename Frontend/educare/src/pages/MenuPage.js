@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as GoIcons from "react-icons/go";
 import * as AiIcons from "react-icons/ai";
-import { MenuPageContent } from "../components/content/MenuPageContent";
-import '../css/MenuPage.css';
+import { MenuPageContent } from "../components/MenuPage/MenuPageContent";
+import '../components/MenuPage/MenuPage.css';
 import { IconContext } from 'react-icons';
-
 
 function MenuPage() {
   const [sidebar, setSidebar] = useState(false);
