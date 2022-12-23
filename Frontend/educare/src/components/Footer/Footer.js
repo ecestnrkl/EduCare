@@ -6,13 +6,13 @@ export default function Footer() {
             <nav>
                 <div className="footer-card">
                 <div className="footer-input">
-                    <p> <a href="https://www.instagram.com/" title="socials" target="_blank" className="LinkColor" rel="noreferrer">Impressum</a></p>
+                    <p> <a href="https://www.instagram.com/" title="Socials" target="_blank" className="LinkColor" rel="noreferrer">Impressum</a></p>
                 </div>
                 <div className="footer-input">
                     <p> <a href="https://www.instagram.com/" title="Contact" target="_blank" className="LinkColor" rel="noreferrer">Kontakt</a></p>
                 </div>
                 <div className="footer-input">
-                    <p> <a href="https://www.instagram.com/" title="policy" target="_blank" className="LinkColor" rel="noreferrer">Über uns</a></p>
+                    <p> <a href="https://www.instagram.com/" title="Policy" target="_blank" className="LinkColor" rel="noreferrer">Über uns</a></p>
                 </div>
                 </div>
             </nav>
