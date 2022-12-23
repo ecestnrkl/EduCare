@@ -1,5 +1,3 @@
-// npm install react-icons
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as GoIcons from "react-icons/go";
