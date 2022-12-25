@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as GoIcons from "react-icons/go";
-import * as AiIcons from "react-icons/ai";
+import * as CgIcons from "react-icons/cg";
 import { MenuPageContent } from "../components/MenuPage/MenuPageContent";
 import '../components/MenuPage/MenuPage.css';
 import { IconContext } from 'react-icons';
@@ -13,7 +13,7 @@ function MenuPage() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: '#fff', size: '20px' }}>
         <div className='menupage'>
           <Link to='#' className='menu-bars'>
             <GoIcons.GoThreeBars onClick={showSidebar} />
@@ -23,7 +23,7 @@ function MenuPage() {
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='menupage-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <CgIcons.CgClose />
               </Link>
             </li>
             {MenuPageContent.map((item, index) => {
@@ -44,5 +44,3 @@ function MenuPage() {
 }
 
 export default MenuPage;
-
-

@@ -6,6 +6,7 @@
     margin-top: 50px;
     font-family: "Montserrat", sans-serif;
     font-size: 50px;
+    font-weight: bolder;
 }
 
 
@@ -20,24 +21,25 @@
     margin-left: auto;
     margin-right: auto;
     font-family: "Montserrat", sans-serif;
-
 }
 
 
 /* SprachOption select für Sprachbutton */
-.TextBox input, .SprachOption select {
+.TextBox input,
+.SprachOption select {
     float: right;
-    padding-right: 20px;
+    padding-left: 20px;
     width: 165px;
     font-family: "Montserrat", sans-serif;
-
 }
 
-.TextBox .Box, .SprachOption select  {
+.TextBox .Box,
+.SprachOption select {
     padding-bottom: 15px;
 }
 
-.Box input, .SprachOption select {
+.Box input,
+.SprachOption select {
     padding: 3px;
     border-radius: 5px;
     border: none;
@@ -49,12 +51,35 @@
     padding-bottom: 60px;
 }
 
+/* Add Child Button */
 
-/* Save Button */
-.save{
+.Wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    padding-bottom: 100px;
+}
+
+.AddChild {
+    float: left;
+}
+
+.AddChild button {
+    padding: 10px 20px;
+    color: rgb(117, 121, 124);
+    background-color: rgb(255, 255, 255); 
+    border-color: rgb(164, 173, 181);
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border-style: double ;
+    font-weight: bold;
+}
+
+/* Save Button */
+.save {
+    float: left;
+    margin-left: 10px;
 }
 
 .save button {
@@ -64,13 +89,13 @@
     color: white;
     cursor: pointer;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 14px;
     font-family: "Montserrat", sans-serif;
-    
+    font-weight: bold;
 }
 
 .save button:hover {
-    background-color: #F7B87B;
+    background-color: #ff9225;
     border: none;
     transition: 200ms;
 }
@@ -80,7 +105,10 @@
 }
 
 
-
+.Box3 {
+    display: block;
+    padding-bottom: 60px;
+}
 
 /*  MEDIA Laptop Ansicht  */
 
@@ -105,27 +133,27 @@
 
 
 @media (min-width: 717px) {
-    .TextBox{
-    column-count: 2;
-    column-gap: 90px;
-    column-width: auto;
-    
-    display: block;    
-    padding: 30px;  
-      
-    background-color: rgb(166, 211, 255);
-    border-radius: 20px;
-    margin: 20px;
-    font-size: 15px;
-    
-    width: 60%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .TextBox {
+        column-count: 2;
+        column-gap: 90px;
+        column-width: auto;
 
-.TextBox input, .SprachOption select {
-    margin: 2px;
-}
-}
+        display: block;
+        padding: 30px;
 
+        background-color: rgb(166, 211, 255);
+        border-radius: 20px;
+        margin: 20px;
+        font-size: 15px;
+
+        width: 60%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .TextBox input,
+    .SprachOption select {
+        margin: 2px;
+    }
+}
