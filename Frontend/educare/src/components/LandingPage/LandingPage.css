@@ -1,4 +1,9 @@
-.LandingPage.css {
-    text-align: center;
-  }
-  
+.landingpage-image {
+  width: 350px;
+}
+
+.Calender_button, .Reports_button {
+  /* Float both forms to the left */
+  float: left; 
+  /* borders added for visibility. Just remove them */
+ }

@@ -3,8 +3,7 @@
 export default function HomePageContent() {
     return (
         <div>
-            <h1>Interkulturelle Verständigung</h1>
-            <h1>ist uns wichtig</h1>
+            <h1>Interkulturelle Verständigung ist uns wichtig</h1>
         </div>
     )
   }
