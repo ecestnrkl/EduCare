@@ -2,8 +2,12 @@
   width: 350px;
 }
 
-.Calender_button, .Reports_button {
+.Calendar, .Reports{
+  float: left;
+  display: block;
+}
+.Wrapper {
   /* Float both forms to the left */
-  float: left; 
-  /* borders added for visibility. Just remove them */
+justify-content: center;  
+/* borders added for visibility. Just remove them */
  }
