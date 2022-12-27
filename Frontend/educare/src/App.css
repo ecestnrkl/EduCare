@@ -43,11 +43,34 @@ button {
   margin-top: 20px;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 button:hover {
   background-color: #ff9225;
+  transition: 200ms;
 }
+
+.gray button {
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(117, 121, 124);
+  cursor: pointer;
+  border-radius: 20px;
+  align-self: center;
+  margin-top: 20px;
+  border: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.2);
+}
+
+.gray button:hover {
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.3);
+    transition: 200ms;
+}
+
 
 .Wrapper {
   /* Float both forms to the left */
