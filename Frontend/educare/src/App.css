@@ -28,8 +28,7 @@ h1{
 }
 
 .Homepage {
-  background-color: #214ddb;
-  height: 600px;
+  background: radial-gradient(50% 50% at 50% 50%, #2C5FF8 0%, #234FE1 100%);  height: 600px;
 }
 
 button {
