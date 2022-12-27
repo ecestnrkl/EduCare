@@ -28,18 +28,29 @@ h1{
 }
 
 button {
-  width: 100%;
-  max-width: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  margin: 0 auto;
-  font-size: 18px;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  align-self: center;
+  margin-top: 20px;
+  font-size: 15px;
   font-family: "Montserrat", sans-serif;
+  left: 410px;
+  top: -61px;
 }
+
+button:hover {
+  background-color: #ff9225;
+}
+
+.Wrapper {
+  /* Float both forms to the left */
+justify-content: center;
+/* borders added for visibility. Just remove them */
+ }
 
 p{
   text-align: left;
