@@ -1,6 +1,6 @@
-.HomePage.css {
+.HomePageContent {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-left: 4px solid var(--theme-col);
     font-size: 2.2rem;
     line-height: 2.25rem;
@@ -8,5 +8,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  
-  
+
+  h1 {
+    color: white;
+  }
+
+  .homepage-content {
+    width: 500px;
+  }

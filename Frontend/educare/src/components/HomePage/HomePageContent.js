@@ -1,9 +1,20 @@
-// import './components/content/HomePageContent.js';
+import './HomePage.css';
+import content from '../image/HomePageImage.png';
 
 export default function HomePageContent() {
     return (
-        <div>
-            <h1>Interkulturelle Verständigung ist uns wichtig</h1>
+        <>
+        <div className='hompage-background'>
+            <div className='homepage-container'>
+                <img
+                    src={content}
+                    className="homepage-content"
+                    alt="content" />
+                <h1>Interkulturelle Verständigung ist uns wichtig</h1>
+            </div>
         </div>
+
+        <div className='hintergund'></div>
+        </>
     )
-  }
+}
