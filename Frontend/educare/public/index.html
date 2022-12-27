@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon-96x96.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -23,11 +23,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>EduCare</title>
   </head>
   <body>
     <div id="google_translate_element" className="Translator"></div>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="%PUBLIC_URL%/translater.js"></script>
+    <!--<https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit />-->
   <script>
     function googleTranslateElementInit(){
       new google.translate.TranslateElement(
