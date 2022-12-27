@@ -1,9 +1,12 @@
 import React from 'react';
 import "./Settings.css"
+import TitleBar from '../TitleBar/TitleBar';
+import Footer from '../Footer/Footer';
 
 export default function SettingsAddChild() {
     return (
         <div>
+            <TitleBar/>
             <div className='settings'> Einstellungen </div>
             {/* <h1>Einstellungen</h1> */}
             <div className='TextBox'>
@@ -46,6 +49,7 @@ export default function SettingsAddChild() {
                 </form>
             </div>
             </div>
+            <Footer/>
         </div>
     )
 }
