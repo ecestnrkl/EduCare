@@ -13,7 +13,7 @@ export default function HomePageContent() {
                 <h2>Interkulturelle Verständigung ist uns wichtig</h2>
             </div>
         </div>
-
+        <a href="/LandingPage" class="wutton">Anmelden</a>
         <div className='hintergund'></div>
         </>
     )

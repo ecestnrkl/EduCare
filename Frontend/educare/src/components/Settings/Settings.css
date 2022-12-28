@@ -1,21 +1,36 @@
 /* Handy Ansicht*/
 
 /* Ab hier Settings Inhalt */
-.WrappTextBox {
+.SpaceTextBox {
     margin-left: 3%;
     margin-right: 3%;
 }
-.TextBox {
-    text-align: left;
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    width: 93%;
+
+.WrapTextBox {
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    color: #444;
+    grid-template-areas:
+    "Content"
+    "Button";
+    grid-template-rows: auto 70px; 
+}
+
+.TextBox {
+    justify-content: center;
+    text-align: left;
+    font-size: 15px;
     font-family: "Montserrat", sans-serif;
     /* font-weight: bold; */
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+    grid-area: Content;
+
 }
 
 
@@ -34,7 +49,7 @@
 .SprachOption {
     text-align: left;
     padding-bottom: 15px;
-}   
+}
 
 /* Text RIGHT */
 .Box input,
@@ -51,59 +66,164 @@
     padding-bottom: 50px;
     justify-content: space-evenly;
 }
+
 .Box2 {
-justify-content: space-evenly;}
+    justify-content: space-evenly;
+}
 
 
 
 
 /* Buttons */
 
-.Wrapper {
+.Wraper {
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
 }
 
 .AddChild {
-    float: left;
+    justify-content: center;
+    grid-area: Button;
 }
 
 .button {
-   float: left;
-   margin-left: 20px;
+    margin-top: -10px;
+    }
+
+.add button {
+    background-color: white;
+    color: black;
+    border: none;
+    margin: 30px;
 }
-
-
-
+  
+  .add button:hover {
+      transition: 200ms;
+  }
+  
+  
 
 
 /* Halb Laptop Ansicht */
+/* grid-template-rows: 200px 70px;  */
 
-@media (min-width: 800px){
-    .TextBox {
-        column-count: 2;
-        
-        column-gap: 100px;
-        column-width: 150px;
-
-        display: block;
-        padding: 30px;
-
-        border-radius: 20px;
-        font-size: 15px;
-
-        width: 60%;
+@media (min-width: 900px) {
+    
+    .WrapTextBox {
+        width: 800px;
+        height: 380px;
         margin-left: auto;
         margin-right: auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        color: #444;
+        grid-template-areas:
+            "Content"
+            "Button";
+        grid-template-rows: 200px 70px;
+        margin-bottom: 50px;
+    }
+    
+    .TextBox {
+        text-align: left;
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
+        grid-area: Content;
+        column-count: 2;
+        column-width: 150px;
+        font-size: 15px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 70%;
+
+        column-gap: 90px;
     }
 
-    .TextBox input,
-    .SprachOption select {
-        margin: 2px;
-        text-align: left;
-        width: 150px;
-    }
+
+
+/* Text LEFT */
+.TextBox .Box,
+.SprachOption {
+    float: left;
+    text-align: left;
+    padding-bottom: 15px;
 }
 
+/* Text RIGHT */
+.Box input,
+.SprachOption select {
+    text-align: left;
+    float: left;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    height: 22px;
+    width: auto;
+}
+
+.AddChild {
+    justify-content: center;
+    grid-area: Button;
+    padding-top: 50px;
+}
+}
+
+
+@media (min-width: 900px) {
+    .SpaceTextBox2 {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    .WrapTextBox2 {
+        width: 800px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        color: #444;
+        grid-template-areas:
+            "Content"
+            "Button";
+        grid-template-rows: 200px 70px;
+        margin-bottom: 50px;
+    }
+        
+}
+
+/* Ab Hier: Add Child Seite*/
+
+.SpaceTextBox2 {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 50px;
+}
+
+.WrapTextBox2 {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    color: #444;
+    grid-template-areas:
+    "Content"
+    "Button";
+    grid-template-rows: auto 70px; 
+    margin-bottom: 200px;
+}
 
