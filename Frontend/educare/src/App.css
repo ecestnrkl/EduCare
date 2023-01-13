@@ -17,9 +17,6 @@ h1{
   font-weight: bolder;
   line-height: 30%;
 }
-h2, h3 {
-  font-family: "Montserrat", sans-serif;
-}
 
 * {
   text-align:center;
@@ -31,7 +28,8 @@ h2, h3 {
 }
 
 .Homepage {
-  background: radial-gradient(50% 50% at 50% 50%, #2C5FF8 0%, #234FE1 100%);  height: 600px;
+  background-color: #214ddb;
+  height: 600px;
 }
 
 button {
@@ -45,12 +43,12 @@ button {
   margin-top: 20px;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  left: 410px;
+  top: -61px;
 }
 
 button:hover {
   background-color: #ff9225;
-  transition: 200ms;
 }
 
 .Wrapper {
