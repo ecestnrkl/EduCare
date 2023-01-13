@@ -12,11 +12,11 @@ h1{
   margin-bottom: 50px;
   margin-top: 50px;
   /* Muss man bei indexhtml downloaden */
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: bolder;
   line-height: 30%;
-  color: black !important;
+  color: black;
 }
 
 * {
