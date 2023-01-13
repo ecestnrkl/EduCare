@@ -10,10 +10,10 @@ export default function HomePageContent() {
                     src={content}
                     className="homepage-content"
                     alt="content" />
-                <h2>Interkulturelle Verständigung ist uns wichtig</h2>
+                <h1>Interkulturelle Verständigung ist uns wichtig</h1>
             </div>
         </div>
-        <a href="/LandingPage" class="wutton">Anmelden</a>
+
         <div className='hintergund'></div>
         </>
     )
