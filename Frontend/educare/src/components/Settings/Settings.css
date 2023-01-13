@@ -1,57 +1,63 @@
 /* Handy Ansicht*/
 
-.settings {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 50px;
-    font-weight: bolder;
-}
-
-
 /* Ab hier Settings Inhalt */
+.WrappTextBox {
+    margin-left: 3%;
+    margin-right: 3%;
+}
 .TextBox {
+    text-align: left;
     padding: 20px;
-    background-color: rgb(166, 211, 255);
     border-radius: 20px;
-    margin: 20px;
     font-size: 15px;
-    width: 380px;
+    width: 93%;
     margin-left: auto;
     margin-right: auto;
     font-family: "Montserrat", sans-serif;
+    /* font-weight: bold; */
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
 }
 
 
 /* SprachOption select für Sprachbutton */
 .TextBox input,
 .SprachOption select {
+    background-color: #DBF2FD;
+    text-align: left;
     float: right;
-    padding-left: 20px;
-    width: 165px;
+    width: 50%;
     font-family: "Montserrat", sans-serif;
 }
 
+/* Text LEFT */
 .TextBox .Box,
-.SprachOption select {
+.SprachOption {
+    text-align: left;
     padding-bottom: 15px;
-}
+}   
 
+/* Text RIGHT */
 .Box input,
 .SprachOption select {
+    text-align: left;
     padding: 3px;
     border-radius: 5px;
     border: none;
     height: 22px;
 }
 
-/* Box1 und Box2 Trenner */
+/* Box1 und Box2 */
 .Box1 {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+    justify-content: space-evenly;
 }
+.Box2 {
+justify-content: space-evenly;}
 
-/* Add Child Button */
+
+
+
+/* Buttons */
 
 .Wrapper {
     display: flex;
@@ -63,91 +69,27 @@
     float: left;
 }
 
-.AddChild button {
-    padding: 10px 20px;
-    color: rgb(117, 121, 124);
-    background-color: rgb(255, 255, 255); 
-    border-color: rgb(164, 173, 181);
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    border-style: double ;
-    font-weight: bold;
+.button {
+   float: left;
+   margin-left: 20px;
 }
 
-/* Save Button */
-.save {
-    float: left;
-    margin-left: 10px;
-}
+/* Halb Laptop Ansicht */
 
-.save button {
-    padding: 10px 20px;
-    background-color: dodgerblue;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-}
-
-.save button:hover {
-    background-color: #ff9225;
-    border: none;
-    transition: 200ms;
-}
-
-.TextBox1 button:hover {
-    background-color: royalblue;
-}
-
-
-.Box3 {
-    display: block;
-    padding-bottom: 60px;
-}
-
-/*  MEDIA Laptop Ansicht  */
-
-@media only screen and (max-width: 400px) {
-    .settings {
-        text-align: center;
-        margin-bottom: 50px;
-        margin-top: 50px;
-        font-family: "Montserrat", sans-serif;
-        font-size: 50px;
-
-        margin-bottom: 50px;
-        margin-top: 50px;
-        font-family: "Montserrat", sans-serif;
-
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 30px;
-        /* transition: 100ms; */
-    }
-}
-
-
-@media (min-width: 717px) {
+@media (min-width: 800px){
     .TextBox {
         column-count: 2;
-        column-gap: 90px;
-        column-width: auto;
+        
+        column-gap: 100px;
+        column-width: 150px;
 
         display: block;
         padding: 30px;
 
-        background-color: rgb(166, 211, 255);
         border-radius: 20px;
-        margin: 20px;
         font-size: 15px;
 
         width: 60%;
-        height: auto;
         margin-left: auto;
         margin-right: auto;
     }
@@ -155,5 +97,8 @@
     .TextBox input,
     .SprachOption select {
         margin: 2px;
+        text-align: left;
+        width: 150px;
     }
 }
+
