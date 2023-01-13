@@ -4,8 +4,7 @@ import * as GoIcons from "react-icons/go";
 import * as CgIcons from "react-icons/cg";
 import { MenuPageContent } from "../components/MenuPage/MenuPageContent";
 import '../components/MenuPage/MenuPage.css';
-const style = { color: "white", fontSize: "1em" }
-
+import { IconContext } from 'react-icons';
 
 function MenuPage() {
   const [sidebar, setSidebar] = useState(false);
@@ -14,16 +13,17 @@ function MenuPage() {
 
   return (
     <>
+      <IconContext.Provider value={{ color: '#fff', size: '20px' }}>
         <div className='menupage'>
           <Link to='#' className='menu-bars'>
-            <GoIcons.GoThreeBars onClick={showSidebar} style={style} />
+            <GoIcons.GoThreeBars onClick={showSidebar} />
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='menupage-toggle'>
               <Link to='#' className='menu-bars'>
-                <CgIcons.CgClose style={style} />
+                <CgIcons.CgClose />
               </Link>
             </li>
             {MenuPageContent.map((item, index) => {
@@ -38,6 +38,7 @@ function MenuPage() {
             })}
           </ul>
         </nav>
+      </IconContext.Provider>
     </>
   );
 }

@@ -1,13 +1,10 @@
 import "./ReportsPage.css"
 import React from "react"
-import TitleBar from "../TitleBar/TitleBar"
-import Footer from "../Footer/Footer"
 
 
 export default function ClassExemption() {
     return (
         <div>
-            <TitleBar/>
             <h1> Meldungen </h1>
             <div className='Wrapper'>
                 <form className="krankmeldung2" action="/ReportsPage">
@@ -60,7 +57,6 @@ export default function ClassExemption() {
                     <button type="submit">Speichern</button>
                 </div>
             </form>
-            <Footer/>
         </div>
     )
 }
