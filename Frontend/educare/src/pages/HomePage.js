@@ -6,13 +6,15 @@ import HomePageContent from "../components/HomePage/HomePageContent";
 
 function HomePage() {
   return (
-    <div className="Homepage">
+    <div>
       <TitleBar />
       <HomePageContent />
       <Footer />
     </div>
   );
 }
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<HomePage />);

@@ -1,13 +1,51 @@
+.LpText {
+  color: black;
+  margin: 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2.25rem;
+
+}
+
+.LandingText {
+  color: black;
+  margin: 30px;
+  text-align: left;
+}
+
 .landingpage-image {
   width: 350px;
 }
 
-.Calendar, .Reports{
+.Calendar,
+.Reports {
   float: left;
   display: block;
 }
+
 .Wrapper {
-  /* Float both forms to the left */
-justify-content: center;  
-/* borders added for visibility. Just remove them */
- }
+  justify-content: center;
+  gap: 20px;
+}
+
+.lutton button{
+  padding: 10px 30px;
+  background-color: white;
+  color: black;
+  border: 3px solid #ADCCED;
+  cursor: pointer;
+  border-radius: 20px;
+  align-self: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  left: 410px;
+  top: -61px;
+}
+
+.lutton button:hover {
+  background-color: #ADCCED;
+}
