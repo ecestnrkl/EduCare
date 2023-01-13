@@ -10,7 +10,7 @@ export default function HomePageContent() {
                     src={content}
                     className="homepage-content"
                     alt="content" />
-                <h1>Interkulturelle Verständigung ist uns wichtig</h1>
+                <h1 className='h1homepage'>Interkulturelle Verständigung ist uns wichtig</h1>
             </div>
         </div>
 

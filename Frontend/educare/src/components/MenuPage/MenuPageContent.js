@@ -6,9 +6,9 @@ import * as CgIcons from "react-icons/cg";
 
 export const MenuPageContent = [
     {
-    title: "Kalender",
-    path: "/Calendar",
-    icon: <BsIcons.BsCalendar4Week />,
+    title: "Home",
+    path: "/LandingPage",
+    icon: <AiIcons.AiOutlineHome />,
     cName: "nav-text",
     },
 {
@@ -18,9 +18,9 @@ export const MenuPageContent = [
     cName: "nav-text",
 },
 {
-    title: "LandingPage",
-    path: "/LandingPage",
-    icon: <AiIcons.AiOutlineHome />,
+    title: "Kalender",
+    path: "/Calendar",
+    icon: <BsIcons.BsCalendar4Week />,
     cName: "nav-text",
 },
 {
@@ -28,5 +28,10 @@ export const MenuPageContent = [
     path: "/Settings",
     icon: <FiIcons.FiSettings />,
     cName: "nav-text",
+},
+{
+    title: "Abmelden",
+    path: "/HomePage",
+    cName: "nav-text-abmelden",
 },
 ]
