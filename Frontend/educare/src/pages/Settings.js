@@ -1,12 +1,10 @@
 import React from 'react';
 import "../components/Settings/Settings.css"
-import TitleBar from '../components/TitleBar/TitleBar';
 import Footer from '../components/Footer/Footer';
 
 export default function Settings() {
     return (
         <div className='Setting'>
-            <TitleBar />
             <h1>Einstellungen</h1>
             <div className='SpaceTextBox'>
                 <div className='WrapTextBox'>

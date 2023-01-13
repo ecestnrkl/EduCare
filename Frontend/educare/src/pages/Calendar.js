@@ -1,12 +1,10 @@
 import React from 'react';
 import "../components/Calendar.css"
-import TitleBar from '../components/TitleBar/TitleBar';
 import Footer from '../components/Footer/Footer';
 
 export default function Calendar() {
     return (
         <>
-        <TitleBar/>
             <h1>Kalender</h1>
             <div className='card'>
             <div className="month">

@@ -11,11 +11,12 @@
     margin-top: 0.4rem;
     font-size: 2rem;
     background: none;
+    z-index: 1;
   }
   
   .nav-menu {
     /* background-color: rgb(255, 140, 29); */
-    background-color: rgb(38, 89, 241);
+    background-color: #234FE1;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -24,7 +25,7 @@
     top: 0;
     left: -100%;
     transition: 850ms;
-    z-index: 999;
+    z-index: 3;
   }
   @media only screen and (max-width: 450px) {
     .nav-menu {
@@ -101,3 +102,16 @@
   span {
     margin-left: 16px;
   }
+
+  
+  .educare-logo{
+    width: 200px;
+  }
+  
+  header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  

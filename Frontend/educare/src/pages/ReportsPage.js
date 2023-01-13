@@ -1,13 +1,11 @@
 import React from 'react';
 import SickNote from '../components/ReportsPage/SickNote';
 import "../components/ReportsPage/ReportsPage.css"
-import TitleBar from '../components/TitleBar/TitleBar';
 import Footer from '../components/Footer/Footer';
 
 export default function ReportsPage() {
     return (
         <div>
-            <TitleBar/>
             <h1> Meldungen </h1>
             <div className='Wrapper'>
             <form className="krankmeldung1" action="/ReportsPage">

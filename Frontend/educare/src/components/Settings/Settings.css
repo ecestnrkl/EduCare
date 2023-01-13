@@ -14,7 +14,7 @@
     margin-left: auto;
     margin-right: auto;
     font-family: "Montserrat", sans-serif;
-    /* font-weight: bold; */
+    font-weight: bold;
     box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
 }
 
@@ -22,11 +22,17 @@
 /* SprachOption select für Sprachbutton */
 .TextBox input,
 .SprachOption select {
-    background-color: #DBF2FD;
+    background-color: #ecf9ff;
     text-align: left;
     float: right;
     width: 50%;
     font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+
+input:focus {
+    background-color: white;
 }
 
 /* Text LEFT */
