@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Settings.css"
+import TitleBar from '../TitleBar/TitleBar';
+import Footer from '../Footer/Footer';
 
 export default function SettingsAddChild() {
     return (
