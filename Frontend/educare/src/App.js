@@ -11,6 +11,7 @@ import SettingsAddChild from './components/Settings/SettingsAddChild';
 
 import { Route, Routes } from "react-router-dom"
 import Calendar from './pages/Calendar';
+import CalendarEintrag from './components/Calendar/CalendarEintrag';
 import ClassExemption from './components/ReportsPage/ClassExemption';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/SettingsAddChild" element={<SettingsAddChild />} />
           <Route path="/ClassExemption" element={<ClassExemption />} />
           <Route path="/Calendar" element={<Calendar />} />
+          <Route path="/CalendarEintrag" element={<CalendarEintrag />} />
         </Routes>
       </div>
     </>
