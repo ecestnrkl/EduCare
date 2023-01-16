@@ -13,6 +13,7 @@ import { Route, Routes } from "react-router-dom"
 import Calendar from './pages/Calendar';
 import CalendarEintrag from './components/Calendar/CalendarEintrag';
 import ClassExemption from './components/ReportsPage/ClassExemption';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
           <Route path="/Settings" element={<Settings />} />
           <Route path="/SettingsAddChild" element={<SettingsAddChild />} />
           <Route path="/ClassExemption" element={<ClassExemption />} />
-          <Route path="/Calendar" element={<Calendar />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/CalendarEintrag" element={<CalendarEintrag />} />
+          <Route path="/Calendar" element={<Calendar />} />
         </Routes>
       </div>
     </>

@@ -1,3 +1,9 @@
+.login {
+  display: grid;
+  justify-content: center;
+}
+
+/* Handy-Ansicht */
 .HomePageContent {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -7,6 +13,10 @@
   font-weight: 800;
   margin-top: 30px;
   margin-bottom: 0px;
+}
+
+.homepage-container{
+  overflow: hidden;
 }
 
 .homepage h1 {
@@ -20,9 +30,7 @@
   width: 500px;
   transform: translate(-30px, 20px);
   margin-bottom: 0px;
-  overflow: hidden;
-  position: relative;
-  
+
 }
 
 .register {
@@ -31,12 +39,25 @@
   float: right;
   justify-content: right;
   line-height: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .reg {
   color: white;
   font-size: 10px;
 }
+
+
+.bold-text {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reg, .bold-text {
+  display: inline-end;
+  margin: 0;
+  padding: 0; 
+}  
 
 /* animierten button */
 .wutton {
@@ -65,7 +86,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: dodgerblue;
+  background-color: #ff9225;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -77,10 +98,12 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #ff9225;
+  background-color: dodgerblue;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
+  overflow: hidden;
+
 }
 
 .wutton:hover {
@@ -90,3 +113,69 @@
 .wutton:hover:before {
   width: 100%;
 }
+
+/* für laptop */
+@media screen and (min-width:800px) {
+  .homepage-content {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+    transform: translate(-30px, 40px);
+    margin-bottom: 0px;
+    z-index: 1;
+    padding-bottom: 80px;
+  }
+
+  .homepage h1 {
+    padding-left: 30px;
+    font-size: 30px;
+    translate: 100px;
+    margin-top: -30px;
+    line-height: 1.0rem;
+
+  }
+
+  .register {
+    line-height: 40px;
+    position: relative;
+    translate: -170px;
+    margin-top: -100px;
+
+  }
+
+  .reg {
+    color: white;
+    font-size: 10px;
+  }
+
+  /* animierten button */
+  .wutton {
+    cursor: pointer;
+    padding-left: 20px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    text-decoration: none;
+    margin: 20px;
+    margin-bottom: 0;
+  }
+  
+  .wutton:after {
+    background-color: #ff9225;
+  }
+  
+  .wutton:before {
+    background-color: dodgerblue;
+  }
+}
+
+
