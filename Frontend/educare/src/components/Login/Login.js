@@ -26,7 +26,7 @@ function Login() {
                         <div className='pass'>Passwort Vergessen?</div>
                         <div className='Anmelden'>
                             <form className="save" action="/LandingPage">
-                                <button type="submit">Anmelden</button>
+                                <button type="submit">Anmelden</button> 
                                 <div class="reg">Noch kein Account? <span class="bold-text">Registrieren!</span></div>
                             </form>
                         </div>
