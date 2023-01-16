@@ -38,6 +38,11 @@ h1{
   background-color: #214ddb;
 }}
 
+@media screen and (min-width:800px) {
+  .Register {
+    background-color: #214ddb;
+  }}
+
 
 button {
   padding: 10px 20px;

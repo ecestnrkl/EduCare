@@ -15,6 +15,11 @@
     margin-top: -20px;
 }
 
+.namen,
+.namen input {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Mit Satoshi wäre Schrift dicker */
 .Register h1 {
@@ -22,7 +27,11 @@
     /* font-family: "Satoshi", sans-serif; */
 }
 
-.Register h1, h2, p, .pass, .Title {
+.Register h1,
+h2,
+p,
+.pass,
+.Title {
     text-align: left;
 }
 
@@ -39,7 +48,7 @@
     margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
-    cursor:caret;
+    cursor: caret;
 }
 
 .pass {
@@ -55,11 +64,17 @@
     padding-bottom: 20px;
 }
 
+.eintrag-name {
+    width: 45%;
+    padding-bottom: 20px;
+}
+
 .Anmelden {
     line-height: 20px;
 }
+
 .Anmelden button {
-    cursor:caret;
+    cursor: caret;
     padding-left: 20px;
     padding: 0.75rem 1.25rem;
     border-radius: 10rem;
@@ -67,13 +82,14 @@
     font-weight: bold;
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
+    margin-top: -30px;
 }
 
 .Register .reg {
     color: black;
     font-size: 10px;
     font-family: "Montserrat", sans-serif;
-  }
+}
 
   .Register .reg a {
     color: black;
@@ -83,48 +99,80 @@
 
   .bold-text {
     font-weight: bold;
-    cursor:caret;
-  }
-  
-  .reg, .bold-text {
+    cursor: caret;
+}
+
+.reg,
+.bold-text {
     display: inline-end;
     margin: 0;
-    padding: 0; 
-  }  
+    padding: 0;
+}
 
-  textarea:focus, .eintrag input:focus{
+textarea:focus,
+.eintrag-name input:focus {
     outline: none;
-  }
+}
+
 
 .blue {
     background-color: #214ddb;
-    bottom:0;
+    bottom: 0;
     height: 70px;
 }
 
-label {
-    display: inline;
+
+/* Checkmark */
+.check .checkmark:after {
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
 }
 
-.checkbox {
+.check input {
+    /* position: absolute;    */
     cursor: pointer;
 }
-  /* Laptop Ansicht */
-  @media screen and (min-width:800px) {
+
+.check {
+    font-size: 10px;
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+}
+
+
+
+
+
+/* Laptop Ansicht */
+@media screen and (min-width:800px) {
     .Register-pic {
         width: 37%;
         height: 37%;
         margin-left: 40px;
     }
-    .Register{
+
+    .Register {
         padding-top: 50px;
         padding-bottom: 50px;
         display: flex;
     }
-    .Anmelden{
+
+    .Anmelden {
         margin-top: 40px;
         margin-bottom: 10px;
     }
+
     .RegisterBox {
         margin-top: 7px;
         box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
@@ -132,4 +180,4 @@ label {
         padding: 30px;
         margin-bottom: 50px;
     }
-  }
+}
