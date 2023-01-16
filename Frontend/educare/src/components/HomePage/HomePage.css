@@ -48,8 +48,9 @@
 }
 
 
-.bold-text {
+.bold-textw {
   font-weight: bold;
+  color: white;
   cursor: pointer;
 }
 

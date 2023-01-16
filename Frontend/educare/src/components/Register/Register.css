@@ -1,5 +1,4 @@
 /* Handy Ansicht */
-
 .RegisterBox {
     width: 90%;
     max-width: 700px;
@@ -12,7 +11,18 @@
     padding: 10px;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
-    margin-top: -20px;
+}
+
+.Register .Wrapper {
+    padding-bottom: 30px;
+}
+
+.lutton button::before {
+    background-color:red;
+}
+
+.lutton button::after {
+    background-color:red;
 }
 
 .namen,
@@ -27,7 +37,7 @@
     /* font-family: "Satoshi", sans-serif; */
 }
 
-.Register h1,
+.Register ,
 h2,
 p,
 .pass,
@@ -69,9 +79,9 @@ p,
     padding-bottom: 20px;
 }
 
-.Register.Anmelden {
+.Register .Anmelden {
     line-height: 20px;
-    margin-top:-50px;
+    margin-top:-30px;
     margin-bottom:60px;
 }
 
@@ -118,31 +128,37 @@ textarea:focus,
 
 
 /* Checkmark */
-.check .checkmark:after {
-    width: 5px;
-    height: 10px;
-    border: solid white;
+.checktext {
+    font-size: 12px;
+}
+.checkbox .checkboxmark:after {
+    display: inline;
     border-width: 0 3px 3px 0;
 }
 
-.check input {
-    /* position: absolute;    */
+.checkbox input {
+    position: absolute;   
+    top: -7px;
+    left: -147px;
     cursor: pointer;
 }
 
-.check {
+.checkbox {
     font-size: 10px;
     display: inline;
     position: relative;
     cursor: pointer;
     user-select: none;
 }
-
 .checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #eee;
+    display: inline;
+  }
+
+.checkbox {
+    width: 5px;
 }
 
 
