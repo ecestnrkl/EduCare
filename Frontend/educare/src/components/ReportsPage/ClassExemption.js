@@ -18,7 +18,7 @@ export default function ClassExemption() {
             <form className="befreiungSeite" action="/ClassExemption">
                 <div className="balken">
                     <p>Sehr geehrte Damen und Herren, <br /><br /> hiermit befreie ich mein Kind</p>
-                    <div className="Datum">
+                    <div className="Name">
                         <label htmlFor="Vorname"></label>
                         <input type="Vorname" id="Vorname" placeholder="Vorname" name="Vorname" />
                         <label htmlFor="Nachname"></label>
@@ -26,14 +26,14 @@ export default function ClassExemption() {
                     </div>
                     <div className="Datum">
                         <label htmlFor="datumAnfang">von</label>
-                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" />
+                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" /><br />
                         <label htmlFor="datumEnde">bis</label>
                         <input type="datumEnde" id="datumEnde" placeholder="TT/MM/JJJJ" name="datumE" />
                     </div>
                     <p>Aus folgendem Grund:</p>
-                    <div className="Grund">
-                        <label for="Grund"></label>
-                        <select id="Grund" name="Grund">
+                    <div className="Grund1">
+                        <label for="Grund1"></label>
+                        <select id="Grund1" name="Grund1">
                             <option value="Auswahl">Bitte auswählen</option>
                             <option value="tod">Tod in der Familie</option>
                             <option value="familie">Wichtiges Familienereignis</option>

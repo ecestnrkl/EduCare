@@ -7,14 +7,14 @@ export default function SickNote() {
             <form className="krankmeldung" action="/ReportsPage">
                 <div className="balken">
                     <div className="Datum">
-                        <label htmlFor="datumAnfang">Datum:</label>
-                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" />
-                        <label htmlFor="datumEnde">bis</label>
+                        <label htmlFor="datumAnfang">von</label>
+                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" /><br/>
+                        <label htmlFor="datumEnde">bis </label>
                         <input type="datumEnde" id="datumEnde" placeholder="TT/MM/JJJJ" name="datumE" />
                     </div>
-                    <div className="Grund">
-                        <label for="Grund">Grund:</label>
-                        <select id="Grund" name="Grund">
+                    <div className="Grund2">
+                        <label for="Grund2">Grund:</label>
+                        <select id="Grund2" name="Grund2">
                             <option value="auswählen">Auswählen</option>
                             <option value="erkältung">Erkältung</option>
                             <option value="covid">Covid-Symptome</option>

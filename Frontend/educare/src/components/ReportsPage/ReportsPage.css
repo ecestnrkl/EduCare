@@ -7,6 +7,7 @@
   background-color: rgb(255, 255, 255);
   text-align: left;
   margin: auto;
+  margin-top: -40px;
   padding: 50px;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
@@ -45,7 +46,21 @@
   box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
 }
 
-.Grund select {
+.Name input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #ecf9ff;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Name input:hover {
+  box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
+}
+
+.Grund1 select {
   margin: 5px 10px 5px 0;
   padding: 10px;
   background-color: #ecf9ff;
@@ -57,12 +72,32 @@
   vertical-align: left;
 }
 
-.Grund select:hover {
+.Grund1 select:hover {
   box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
 }
-.Grund select:focus {
+.Grund1 select:focus {
   background-color: white;
 }
+
+.Grund2 select {
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #ecf9ff;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: left;
+}
+
+.Grund2 select:hover {
+  box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
+}
+.Grund2 select:focus {
+  background-color: white;
+}
+
 
 
 .Speichern{
@@ -106,7 +141,6 @@ justify-content: center;
   font-weight: bold;
   
 }
-
 
 .befreiung button:hover {
   background-color: #ADCCED;
@@ -161,4 +195,33 @@ justify-content: center;
   margin-top: -30px;
   float: middle;
   padding: 10px;
+}
+
+
+@media screen and (max-width:800px) {
+  .krankmeldung1 button, .befreiung button, .krankmeldung2 button, .befreiung2 button {
+  font-size: 15px;
+  margin: auto;
+  padding: auto;
+  }
+
+  .balken{
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .Datum {
+    text-align: center;
+  }
+
+  .Name{
+    margin-top: -40px;
+    margin-left: 5px;
+  }
+
+  .Grund1{
+    margin-top: -40px;
+    margin-bottom: -30px;
+  }
 }

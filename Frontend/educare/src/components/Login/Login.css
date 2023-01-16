@@ -75,6 +75,12 @@
     font-family: "Montserrat", sans-serif;
   }
 
+  .login .reg a{
+    color: black;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+  }
+
   .bold-text {
     font-weight: bold;
     cursor:caret;

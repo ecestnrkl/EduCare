@@ -27,7 +27,7 @@ function Login() {
                         <div className='Anmelden'>
                             <form className="save" action="/LandingPage">
                                 <button type="submit">Anmelden</button> 
-                                <div class="reg">Noch kein Account? <span class="bold-text">Registrieren!</span></div>
+                                <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
                             </form>
                         </div>
                     </div>

@@ -39,6 +39,7 @@ function Register() {
                             <form className="save" action="/LandingPage">
                                 <button type="submit">Registrieren</button>
                             </form>
+                            <div className="reg">Hast du schon ein Account? <a href="/Login" class="bold-text">Anmelden!</a></div>
                         </div>
                     </div>
                 </div>
