@@ -14,20 +14,20 @@ export default function Settings() {
                             <div className='Schule'>
                                 <div className='Box'>
                                     <label for="Schule">Schule: </label>
-                                    <input type="text" id="schule" school="Schule" placeholder="Realschule München" />
+                                    <input type="text" id="schule" school="Schule" placeholder="Schule" />
                                 </div>
                             </div>
                             <div className='Box'>
                                 <label for="fname">Vorname: </label>
-                                <input type="text" id="fname" name="fname" placeholder="Isra" />
+                                <input type="text" id="fname" name="fname" placeholder="Vorname Elternteil" />
                             </div>
                             <div className='Box'>
                                 <label for="lname">Nachname: </label>
-                                <input type="text" id="lname" name="lname" placeholder="Özdemir" />
+                                <input type="text" id="lname" name="lname" placeholder="Nachname Elternteil" />
                             </div>
                             <div className='Box'>
                                 <label for="email">Email Adresse: </label>
-                                <input type="email" id="email" name="email" placeholder="isra.özdemir@gmail.com" />
+                                <input type="emailEltern" id="emailEltern" name="emailEltern" placeholder="Email Elternteil" />
                             </div>
                             <div className='Box'>
                                 <label for="pwd">Passwort: </label>
@@ -51,24 +51,24 @@ export default function Settings() {
 
                         <div className="Box2">
                             <div className='Box'>
-                                <label for="fname">Vorname Kind: </label>
-                                <input type="text" id="fname" name="fname" placeholder="Selin" />
+                                <label for="fnamek">Vorname Kind: </label>
+                                <input type="text" id="fnamek" name="fnamek" placeholder="Vorname Kind" />
                             </div>
                             <div className='Box'>
-                                <label for="lname">Nachname Kind: </label>
-                                <input type="text" id="lname" name="lname" placeholder="Özdemir" />
+                                <label for="lnamek">Nachname Kind: </label>
+                                <input type="text" id="lnamek" name="lnamek" placeholder="Nachname Kind" />
                             </div>
                             <div className='Box'>
                                 <label for="class">Klasse: </label>
-                                <input type="text" id="class" name="class" placeholder="7b" />
+                                <input type="text" id="class" name="class" placeholder="Klasse" />
                             </div>
                             <div className='Box'>
                                 <label for="teacher">Klassenlehrer: </label>
-                                <input type="text" id="teacher" name="teacher" placeholder="Wolfgang Stein" />
+                                <input type="text" id="teacher" name="teacher" placeholder="Klassenlehrer" />
                             </div>
                             <div className='Box'>
-                                <label for="email">Email Adresse: </label>
-                                <input type="email" id="email" name="email" placeholder="wolfgang.stein@edu.de" />
+                                <label for="emailLehrer">Email Adresse: </label>
+                                <input type="emailLehrer" id="emailLehrer" name="emailLehrer" placeholder="Email Klassenlehrer" />
                             </div>
                         </div>
                     </div>
