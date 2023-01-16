@@ -14,6 +14,7 @@ import Calendar from './pages/Calendar';
 import CalendarEintrag from './components/Calendar/CalendarEintrag';
 import ClassExemption from './components/ReportsPage/ClassExemption';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/CalendarEintrag" element={<CalendarEintrag />} />
           <Route path="/Calendar" element={<Calendar />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
       </div>
     </>
