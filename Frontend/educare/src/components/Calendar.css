@@ -1,4 +1,4 @@
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;}
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
@@ -75,7 +75,6 @@ body {font-family: Verdana, sans-serif;}
   border-radius: 100px;
 }
 
-/* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
 }
@@ -87,4 +86,4 @@ body {font-family: Verdana, sans-serif;}
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
-}
+} */

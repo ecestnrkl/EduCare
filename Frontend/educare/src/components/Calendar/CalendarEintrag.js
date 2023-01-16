@@ -16,7 +16,7 @@ export default function CalendarEintrag() {
                         <li className="next">❯</li>
                         <li>
                             Dezember
-                            <span style={{ fontSize: 18 }}>2023</span>
+                            <span style={{ fontSize: 18 }}>2022</span>
                         </li>
                     </ul>
                 </div>
@@ -41,10 +41,10 @@ export default function CalendarEintrag() {
                     <li>9</li>
                     <li>10</li>
                     <li>
-                <form action="">
-                <button className="notactive2">11</button>
-                </form>
-                </li>
+                        <form action="">
+                            <button className="notactive2">11</button>
+                        </form>
+                    </li>
                     <li>12</li>
                     <li>13</li>
                     <li>14</li>
@@ -69,6 +69,11 @@ export default function CalendarEintrag() {
                     <li>29</li>
                     <li>30</li>
                     <li>31</li>
+                    <lip>1</lip>
+                    <lip>2</lip>
+                    <lip>3</lip>
+                    <lip>4</lip>
+
                 </ul>
             </div>
             <br />
@@ -93,9 +98,9 @@ export default function CalendarEintrag() {
                         <div className="dropdown-content">
                             <p>Wichteln:</p><p2>Wichteln beschreibt einen Vorgang, bei dem sich eine gewisse Anzahl an Personen in der Vorweihnachtszeit zusammenfindet, um sich gegenseitig zu beschenken. Damit jeder beim Wichteln genau ein Geschenk bekommt und ein Geschenk gibt, wird ausgelost, wer wen beschenkt.
                             </p2> </div> </div> möchten. Sorgen sie deshalb bitte dafür, dass ihr Kind ein Geschenk im Preis von 5 bis 10€ an diesem Tag dabei hat. <br /><br /> Ich wünsche Ihnen noch schöne Feiertage!<br /><br />Mit freundlichen Grüßen<br />Herr Stein</p>
-            </div>
-            <hr /><div className="Nachricht2">
-                <p> Antworten</p><i><AiIcons.AiOutlineSend/></i>
+                </div>
+                <hr /><div className="Nachricht2">
+                    <p> Antworten</p><i><AiIcons.AiOutlineSend /></i>
                 </div></div>
             <br /><br /><br /><br /><br />
             <Footer />

@@ -13,7 +13,7 @@ export default function CalendarContent() {
                     <li className="next">❯</li>
                     <li>
                         Dezember
-                        <span style={{ fontSize: 18 }}>2023</span>
+                        <span style={{ fontSize: 18 }}>2022</span>
                     </li>
                 </ul>
             </div>
@@ -66,6 +66,10 @@ export default function CalendarContent() {
                 <li>29</li>
                 <li>30</li>
                 <li>31</li>
+                <lip>1</lip>
+                <lip>2</lip>
+                <lip>3</lip>
+                <lip>4</lip>
             </ul>
             </div>
             <br/>
