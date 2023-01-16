@@ -1,3 +1,16 @@
+.landingpagecontent {
+  width: 90%;
+  max-width: 900px;
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
 .LpText {
   color: black;
   margin: 30px;
@@ -21,7 +34,7 @@
 
 .landingpage-image {
   width: 300px auto;
-}
+  }
 
 .Calendar,
 .Reports {

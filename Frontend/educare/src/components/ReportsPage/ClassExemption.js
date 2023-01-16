@@ -17,40 +17,41 @@ export default function ClassExemption() {
             </div>
             <form className="befreiungSeite" action="/ClassExemption">
                 <div className="balken">
-                    <p>Sehr geehrte Damen und Herren, <br /><br /> hiermit befreie ich mein Kind</p>
-                    <div className="Name">
-                        <label htmlFor="Vorname"></label>
-                        <input type="Vorname" id="Vorname" placeholder="Vorname" name="Vorname" />
-                        <label htmlFor="Nachname"></label>
-                        <input type="Nachname" id="Nachname" placeholder="Nachname" name="Nachname" />
-                    </div>
-                    <div className="Datum">
-                        <label htmlFor="datumAnfang">von</label>
-                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" /><br />
-                        <label htmlFor="datumEnde">bis</label>
-                        <input type="datumEnde" id="datumEnde" placeholder="TT/MM/JJJJ" name="datumE" />
-                    </div>
-                    <p>Aus folgendem Grund:</p>
-                    <div className="Grund1">
-                        <label for="Grund1"></label>
-                        <select id="Grund1" name="Grund1">
-                            <option value="Auswahl">Bitte auswählen</option>
-                            <option value="tod">Tod in der Familie</option>
-                            <option value="familie">Wichtiges Familienereignis</option>
-                            <option value="arzt">Arzttermin</option>
-                            <option value="religion">Religiöser Grund</option>
-                            <option value="Wettbewerb">Wettbewerb</option>
-                            <option value="Ehrenamtliche">Ehrenamtliche Tätigkeit</option>
-                            <option value="Fahrprüfung">Fahrprüfung</option>
-                            <option value="sonstiges">Sonstiges</option>
-                        </select>
-                    </div>
-                    <p><br />Mit freundlichen Grüßen, <br /> Isra Özdemir <br /></p>
-                    <p>Nachweis (bei Gegebenheit):</p>
-                    <div className="Nachweis">
-                        <form method="post" action="ClassExemption" enctype="multipart/form-data">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-                            <input type="file" name="datei" size="40" maxlength="100000" />
+
+                    <div className="befreiungstext">
+                        <form name="myform" method="post" action="action.php">
+                            <div className="b-text">
+                                <label for="text">Sehr geehrte Damen und Herren <br /><br /> </label>
+                                <label for="text">hiermit befreie ich mein Kind <br /> </label>
+                                <div className="student-name">
+                                    <input type="text" id="vorname" className="auswahl" placeholder="Vorname" />
+                                    <input type="text" id="nachname" className="auswahl" placeholder="Nachname" />
+                                </div>
+                                <label for="text">  <br /><br />vom </label>
+                                <input type="text" id="datumAnfang" className="auswahl" placeholder="TT/MM/JJJJ" />
+                                <label for="text"> bis </label>
+                                <input type="text" id="datumEnde" className="auswahl" placeholder="TT/MM/JJJJ" />
+                                <label for="text">  <br /><br />Aus folgendem Grund: </label>
+                                <select id="Grund1" className="Grund1">
+                                    <option value="Auswahl">Bitte auswählen</option>
+                                    <option value="tod">Tod in der Familie</option>
+                                    <option value="familie">Wichtiges Familienereignis</option>
+                                    <option value="arzt">Arzttermin</option>
+                                    <option value="religion">Religiöser Grund</option>
+                                    <option value="Wettbewerb">Wettbewerb</option>
+                                    <option value="Ehrenamtliche">Ehrenamtliche Tätigkeit</option>
+                                    <option value="Fahrprüfung">Fahrprüfung</option>
+                                    <option value="sonstiges">Sonstiges</option>
+                                </select>
+                                <label for="text"><br /><br /><br />Mit freundlichen Grüßen, <br /> Isra Özdemir <br /> </label>
+                                <label className="nachweis-text"> <br /> <br />Nachweis (bei Gegebenheit): </label>
+                                <div className="Nachweis">
+                                    <form method="post" action="ClassExemption" enctype="multipart/form-data">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+                                        <input type="file" name="datei" size="40" maxlength="100000" />
+                                    </form>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

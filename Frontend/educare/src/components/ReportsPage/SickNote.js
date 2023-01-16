@@ -5,26 +5,27 @@ export default function SickNote() {
     return (
         <div>
             <form className="krankmeldung" action="/ReportsPage">
-                <div className="balken">
-                    <div className="Datum">
-                        <label htmlFor="datumAnfang">von</label>
-                        <input type="datumAnfang" id="datumAnfang" placeholder="TT/MM/JJJJ" name="datumA" /><br/>
-                        <label htmlFor="datumEnde">bis </label>
-                        <input type="datumEnde" id="datumEnde" placeholder="TT/MM/JJJJ" name="datumE" />
+                <div className="balke">
+                    <div className="tag">
+                        <label for="input">Von: </label>
+                        <label for="input">Bis: </label>
+                        <label for="input">Grund: </label>
                     </div>
-                    <div className="Grund2">
-                        <label for="Grund2">Grund:</label>
-                        <select id="Grund2" name="Grund2">
+                    <div className="tag-input">
+                        <input type="text" id="datumAnfang" className="auswahl" placeholder="TT/MM/JJJJ" />
+                        <input type="text" id="datumEnde" className="auswahl" placeholder="TT/MM/JJJJ" />
+                        <select id="Grund1" className="Grund1">
                             <option value="auswählen">Auswählen</option>
                             <option value="erkältung">Erkältung</option>
                             <option value="covid">Covid-Symptome</option>
                             <option value="magen">Magen Darm Virus</option>
                         </select>
+                        </div>
+                        </div>
+
+                    <div className="Wrapper">
+                        <button type="submit">Speichern</button>
                     </div>
-                </div>
-                <div className="Wrapper">
-                    <button type="submit">Speichern</button>
-                </div>
             </form>
         </div>
     )

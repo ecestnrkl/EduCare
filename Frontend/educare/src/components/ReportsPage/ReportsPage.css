@@ -1,29 +1,42 @@
 .balken {
-  width: 90%;  
+  width: 90%;
   max-width: 700px;
-  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   text-align: left;
   margin: auto;
-  margin-top: -40px;
-  padding: 50px;
+  margin-top: -50px;
+  padding: 10px;
+  padding-bottom: 3%;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
 }
-.balken:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+.b-text {
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 8%;
+}
+
+.student-name {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: -20px;
 }
 
 @media (max-width: 560px) {
-    .Balken {
-        min-width: 100px;
-        margin: 20px;
-    }
+  .Balken {
+    min-width: 100px;
+    margin: 20px;
+  }
 }
 
-.krankmeldung {  
+.krankmeldung {
   align-items: left;
   text-align: left;
 }
@@ -32,87 +45,52 @@
   margin: 5px 10px 5px 0;
 }
 
-.Datum input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
+.b-text input,
+.student-name input {
+  background-color: #ecf9ff;
+  width: 30%;
+}
+
+.Balken .Grund1 {
+  margin-left: 10px;
+}
+
+.Grund1,
+.auswahl {
+  width: 35%;
+  padding: 3px;
   background-color: #ecf9ff;
   border: none;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgb(114, 114, 114);
 }
 
-.Datum input:hover {
+.Grund1:hover,
+.auswahl:hover {
   box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
 }
 
-.Name input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #ecf9ff;
-  border: none;
-  border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.Name input:hover {
-  box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
-}
-
-.Grund1 select {
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #ecf9ff;
-  border: none;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  font-family: "Montserrat", sans-serif;
-  vertical-align: left;
-}
-
-.Grund1 select:hover {
-  box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
-}
-.Grund1 select:focus {
+.Grund1:focus,
+.auswahl:focus {
   background-color: white;
 }
 
-.Grund2 select {
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #ecf9ff;
-  border: none;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  font-family: "Montserrat", sans-serif;
-  vertical-align: left;
-}
-
-.Grund2 select:hover {
-  box-shadow: 0 0 5px rgba(94, 94, 94, 0.7) inset;
-}
-.Grund2 select:focus {
-  background-color: white;
-}
-
-
-
-.Speichern{
-justify-content: center;
+.Speichern {
+  justify-content: center;
 }
 
 
 /* Ab hier für Allgemeine Seite/SickNote */
-.krankmeldung1, .befreiung{
+.krankmeldung1,
+.befreiung {
   float: left;
   display: block;
 }
 
 
-.krankmeldung1 button{
+.krankmeldung1 button {
   padding: 10px 30px;
   background-color: #ADCCED;
   color: black;
@@ -124,10 +102,10 @@ justify-content: center;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  
+
 }
 
-.befreiung button{
+.befreiung button {
   padding: 10px 30px;
   background-color: white;
   color: black;
@@ -139,19 +117,57 @@ justify-content: center;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  
+
 }
 
 .befreiung button:hover {
   background-color: #ADCCED;
 }
+
 .befreiung button::after {
   background-color: #ADCCED;
 }
 
 /* Ab hier für ClassExemption */
+.balke {
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  margin: auto;
+  margin-top: -50px;
+  padding: 10px;
+  padding-bottom: 3%;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  column-count: 2;
+}
 
-.krankmeldung2 button{
+.tag {
+  align-items:baseline;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+/* Sicknote */
+.auswahl,
+.krankmeldung .Grund1 {
+  width: 80%;
+}
+
+.tag-input {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+
+.krankmeldung2 button {
   padding: 10px 30px;
   background-color: white;
   color: black;
@@ -163,13 +179,13 @@ justify-content: center;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  }
+}
 
 .krankmeldung2 button:hover {
   background-color: #ADCCED;
 }
 
-.befreiung2 button{
+.befreiung2 button {
   padding: 10px 30px;
   background-color: #ADCCED;
   color: black;
@@ -181,47 +197,53 @@ justify-content: center;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  }
-
-.befreiungSeite{
-  text-align: left;
 }
 
-.Nachweis{
+.nachweis-text {
+  padding-top: -20px;
+}
+
+.Nachweis {
   font-size: medium;
-  background-color: rgb(239, 239, 239);
-  border-radius: 10px;
-  width: auto;
-  margin-top: -30px;
-  float: middle;
+  /* background-color: rgb(255, 255, 255);
+  border-radius: 10px;      
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+  width: 50%; */
   padding: 10px;
+  padding-left: 0px;
+}
+
+.Nachweis input {
+  color: transparent;
+  float: left;
+  background-color: transparent;
 }
 
 
+
+/* Handy */
 @media screen and (max-width:800px) {
-  .krankmeldung1 button, .befreiung button, .krankmeldung2 button, .befreiung2 button {
-  font-size: 15px;
-  margin: auto;
-  padding: auto;
+
+  .krankmeldung1 button,
+  .befreiung button,
+  .krankmeldung2 button,
+  .befreiung2 button {
+    font-size: 15px;
+    margin: auto;
+    padding: auto;
   }
 
-  .balken{
+  .balken {
     font-size: 15px;
     padding: 5px;
     text-align: left;
+    padding-bottom: 10%;
   }
 
-  .Datum {
-    text-align: center;
+  .Nachweis {
+    font-size: medium;
+    padding: 10px;
+    margin-right: 15%;
   }
 
-  .Name{
-    margin-top: -40px;
-    margin-left: 5px;
-  }
-
-  .Grund1{
-    margin-top: -40px;
-    margin-bottom: -30px;
-  }
 }
