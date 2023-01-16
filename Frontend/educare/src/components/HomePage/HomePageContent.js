@@ -17,7 +17,7 @@ export default function HomePageContent() {
                 </div>
                 <div className='register'>
                     <a href="/Login" class="wutton">Anmelden</a>
-                    <div class="reg">Noch kein Account? <span class="bold-text">Registrieren!</span></div>
+                    <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
                     </div>
             </div>
         </>
