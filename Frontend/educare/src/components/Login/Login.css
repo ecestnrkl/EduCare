@@ -57,6 +57,7 @@
 
 .Anmelden {
     line-height: 20px;
+    padding-top: 70px;
 }
 .Anmelden button {
     cursor:caret;
@@ -96,11 +97,7 @@
     outline: none;
   }
 
-.blue {
-    background-color: #214ddb;
-    bottom:0;
-    height: 70px;
-}
+
   /* Laptop Ansicht */
   @media screen and (min-width:800px) {
     .login-pic {
@@ -108,16 +105,21 @@
         height: 37%;
         margin-left: 40px;
     }
+    .blue {
+        background-color: #214ddb;
+        bottom:0;
+        height: 70px;
+    }
     .login{
         padding-top: 50px;
         padding-bottom: 50px;
         display: flex;
     }
     .Anmelden{
+        padding-top: 0px;
         margin-top: 40px;
         margin-bottom: 10px;
-    }
-    .loginBox {
+    }    .loginBox {
         margin-top: 7px;
         box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
         width: 40%;

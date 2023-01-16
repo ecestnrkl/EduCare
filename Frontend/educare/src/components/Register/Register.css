@@ -69,8 +69,10 @@ p,
     padding-bottom: 20px;
 }
 
-.Anmelden {
+.Register.Anmelden {
     line-height: 20px;
+    margin-top:-50px;
+    margin-bottom:60px;
 }
 
 .Anmelden button {
@@ -115,13 +117,6 @@ textarea:focus,
 }
 
 
-.blue {
-    background-color: #214ddb;
-    bottom: 0;
-    height: 70px;
-}
-
-
 /* Checkmark */
 .check .checkmark:after {
     width: 5px;
@@ -152,8 +147,6 @@ textarea:focus,
 
 
 
-
-
 /* Laptop Ansicht */
 @media screen and (min-width:800px) {
     .Register-pic {
@@ -168,11 +161,13 @@ textarea:focus,
         display: flex;
     }
 
-    .Anmelden {
+    .Register .Anmelden{
+        margin-top:-50px;
+        margin-bottom:60px;    
+        padding-top: 0px;
         margin-top: 40px;
         margin-bottom: 10px;
     }
-
     .RegisterBox {
         margin-top: 7px;
         box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
@@ -180,4 +175,10 @@ textarea:focus,
         padding: 30px;
         margin-bottom: 50px;
     }
+    .blue {
+        background-color: #214ddb;
+        bottom: 0;
+        height: 70px;
+    }
+    
 }
