@@ -14,6 +14,12 @@ function MenuPage() {
 
   const showSidebar = () => setSidebar(!sidebar);
 
+  // const handleLogout = () => {
+	// 	localStorage.removeItem("token");
+	// 	window.location.reload();
+	// };
+
+
   return (
     <>
       <div className='menupage'>
@@ -27,6 +33,9 @@ function MenuPage() {
               className="educare-logo"
               alt="logo" />
           </a>
+          {/* <button onClick={handleLogout}>
+					Logout
+				</button> */}
         </header>
       </div>
       <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

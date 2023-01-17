@@ -1,21 +1,21 @@
-const express = require('express');
-const childRouter = require('./routes/child.js')
-const cors = require("cors");
+require("dotenv").config();
+const express = require("express");
 const app = express();
+const cors = require("cors");
+const connection = require("./db");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
 
-const mongoose = require("mongoose");
-const mongoDB = "mongodb://127.0.0.1:27017";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-db.once('open', () => console.log('Connected to Database'))
+// database connection
+connection();
 
-app.use(cors());
+// middlewares
 app.use(express.json());
-app.use('/', childRouter);
+app.use(cors());
 
-const PORT = 3001
+// routes
+app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Node.js App running on port ${PORT}...`)
-  })
+const port = process.env.PORT || 3001;
+app.listen(port, console.log(`Listening on port ${port}...`));

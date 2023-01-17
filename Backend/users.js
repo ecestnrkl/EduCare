@@ -40,6 +40,7 @@ router.post('/users/login', async function (req, res) {
 //     }
 // });
 
+// ins menü schieben
 router.post('/users/logout', async (req, res) => {
     //User ausloggen
     try {
@@ -64,7 +65,6 @@ router.get('/users/profile', authenticate , function (req, res) {
         name: req.user.name
     })
 });
-
 
 
 router.get('/users', async function (req, res) {

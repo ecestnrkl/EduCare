@@ -1,65 +1,39 @@
-const express = require('express')
-const Users = require('../db/models/users');
-const auth = require('../middleware/auth');
-const router = new express.Router()
+const router = require("express").Router();
+const { User, validate } = require("../models/user");
+const bcrypt = require("bcrypt");
 
-router.post('/users', async (req, res) => {
-    const user = new Users(req.body)
-    try {
-        const token = await user.generateAuthToken()
-        res.status(201).send({ user, token })
-    } catch (e) {
-        res.status(400).send(e.message)
-    }
-})
+router.post("/", async (req, res) => {
+	try {
+		const { error } = validate(req.body);
+		if (error)
+			return res.status(400).send({ message: error.details[0].message });
 
-router.post('/users/login', async (req, res) => {
-    try {
-        const user = await Users.findByCredentials(req.body.email, req.body.password)
-        const token = await user.generateAuthToken()
-        res.status(200).send({ user, token })
-    } catch (e) {
-        res.status(400).send(e.message)
-    }
-})
+		const user = await User.findOne({ email: req.body.email });
+		if (user)
+			return res
+				.status(409)
+				.send({ message: "User with given email already Exist!" });
 
+		const salt = await bcrypt.genSalt(Number(process.env.SALT));
+		const hashPassword = await bcrypt.hash(req.body.password, salt);
 
-router.get('/users/logout', auth, async (req, res) => {
-    try {
-        req.user.tokens = req.user.tokens.filter(token => token.token !== req.token)
-        await req.user.save()
-        res.status(200).send(req.user)
-    } catch (e) {
-        res.status(500).send(e.message)
-    }
-})
-router.get('/users/me', auth, async (req, res) => {
-    res.status(200).send(req.user)
-})
+		await new User({ ...req.body, password: hashPassword }).save();
+		res.status(201).send({ message: "User created successfully" });
+	} catch (error) {
+		res.status(500).send({ message: "Internal Server Error" });
+	}
+});
 
-router.patch('/users/me', auth, async (req, res) => {
-    const allowedUpdates = ['fname', 'lname', 'password']
-    const keys = Object.keys(req.body)
-    const isUpdationValid = keys.every(key => allowedUpdates.includes(key))
-    if (!isUpdationValid)
-        res.status(400).send()
-    try {
-        keys.forEach(update => req.user[update] = req.body[update])
-        await req.user.save();
-        res.status(200).send(req.user)
-    } catch (e) {
-        res.status(400).send()
-    }
-})
-
-router.delete('/users/me', auth, async (req, res) => {
-    try {
-        await req.user.remove();
-        res.status(200).send()
-    } catch (e) {
-        res.status(400).send()
-    }
-})
+router.get('/', async function (req, res) {
+    Users.find({}, function (err, users) {
+      if (err) {
+        res.status(404).send(err.message);
+        next();
+      } else {
+        res.status(200).json(users);
+      }
+    });
+  });
 
 
-module.exports = router
+module.exports = router;
