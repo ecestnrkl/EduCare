@@ -1,5 +1,7 @@
 /* Handy Ansicht */
-
+.login-pic {
+    width: 100%;
+}
 .loginBox {
     width: 90%;
     max-width: 700px;

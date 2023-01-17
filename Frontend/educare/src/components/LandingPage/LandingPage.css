@@ -9,7 +9,6 @@
   padding: 10px;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  
 }
 
 .LpText {
@@ -23,19 +22,24 @@
 }
 
 .landingpagecontent h1 {
-  margin: 30px;  
+  margin: 30px;
   line-height: 30px;
 }
 
 .LandingText {
   color: black;
-  margin: 30px;
+  margin: 15px;
   text-align: left;
+  hyphens: auto; 
+	text-align: justify
 }
 
 .landingpage-image {
-  width: 300px auto;
-  }
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .Calendar,
 .Reports {
@@ -48,7 +52,7 @@
   gap: 20px;
 }
 
-.lutton button{
+.lutton button {
   padding: 10px 30px;
   background-color: white;
   color: black;
@@ -72,9 +76,13 @@
 
 @media screen and (max-width:800px) {
   .landingpagecontent h1 {
-    margin: 30px;  
+    margin: 30px;
     line-height: 30px;
     font-size: 22px;
   }
-    
+
+  .landingpage-image {
+    width: 100%;
+  }
+
 }

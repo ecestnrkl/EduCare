@@ -1,4 +1,4 @@
-import image from '../image/illustration-landingpage.png';
+import image from '../image/HomePageImage.png';
 
 export default function LandingPageContent() {
     return (
