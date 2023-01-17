@@ -137,8 +137,8 @@ textarea:focus,
 }
 
 .checkbox input {
-    position: absolute;   
-    top: -7px;
+    position: relative;   
+    top: -22px;
     left: -147px;
     cursor: pointer;
 }

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import React from 'react'
 import image from '../image/sit.png';
 import Footer from '../Footer/Footer';
@@ -43,40 +42,43 @@ const Login = () => {
                     <div className='loginBox'>
                         <div>
                             <form onSubmit={handleSubmit}>
-                                <h1>Login to Your Account</h1>
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    name="email"
-                                    onChange={handleChange}
-                                    value={data.email}
-                                    required
-                                    className='eintrag'
-                                />
-                                <input
-                                    type="password"
-                                    placeholder="Password"
-                                    name="password"
-                                    onChange={handleChange}
-                                    value={data.password}
-                                    required
-                                    className='eintrag'
-                                />
+                                <h1>Anmelden</h1>
+                                <div className='eintrag'>
+                                    <div className='Title'>Email</div>
+                                    <input
+                                        type="email"
+                                        placeholder="Email"
+                                        name="email"
+                                        onChange={handleChange}
+                                        value={data.email}
+                                        required
+                                        className='eintrag'
+                                    />
+                                </div>
+                                <div className='eintrag'>
+                                    <div className='Title'>Passwort</div>
+                                    <input
+                                        type="password"
+                                        placeholder="Password"
+                                        name="password"
+                                        onChange={handleChange}
+                                        value={data.password}
+                                        required
+                                        className='eintrag'
+                                    />
+                                </div>
                                 {error && <div className={Loginstyle.error_msg}>{error}</div>}
-                                <button type="submit" className="save">
-                                    Sing In
-                                </button>
+                                <div className='pass'>Passwort Vergessen?</div>
+                                <div className='Anmelden'>
+                                    <form className="save" action="/Landingpage">
+                                        <button type="submit">Anmelden</button>
+                                        <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
+                                    </form>
+                                </div>
                             </form>
                         </div>
-                        <div>
-                            <h1>New Here ?</h1>
-                            <Link to="/signup">
-                                <button type="button" className="save">
-                                    Sing Up
-                                </button>
-                            </Link>
-                        </div>
                     </div>
+                    <div className='blue'></div>
                 </div>
                 <Footer />
             </>

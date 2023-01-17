@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React from 'react'
 import Footer from '../Footer/Footer';
 import Register from './Register.css';
@@ -42,58 +42,92 @@ const Signup = () => {
             <div className='Register'>
                 <div className='RegisterBox'>
                     <h1>Registrieren</h1>
+                    <div className='Title'>Ich bin...</div>
+
+                    <div className='Wrapper'>
+                        <div className='Calendar'>
+                            <form className="lutton">
+                                <button type="submit">Lehrer</button>
+                            </form>
+                        </div>
+                        <div className='Reports'>
+                            <form className="lutton">
+                                <button type="submit">Elternteil</button>
+                            </form>
+                        </div>
+                    </div>
                     <div>
                         <form onSubmit={handleSubmit}>
-                            <h3>Erstelle einen Account</h3>
-                            <input
-                                type="text"
-                                placeholder="First Name"
-                                name="firstName"
-                                onChange={handleChange}
-                                value={data.firstName}
-                                required
-                                className='eintrag'
-                            />
-                            <input
-                                type="text"
-                                placeholder="Last Name"
-                                name="lastName"
-                                onChange={handleChange}
-                                value={data.lastName}
-                                required
-                                className='eintrag'
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                name="email"
-                                onChange={handleChange}
-                                value={data.email}
-                                required
-                                className='eintrag'
-                            />
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                name="password"
-                                onChange={handleChange}
-                                value={data.password}
-                                required
-                                className='eintrag'
-                            />
+                            <div className='namen'>
+
+                                <div className='eintrag-name'>
+                                    <div className='Title'>Vorname</div>
+                                    <input
+                                        type="text"
+                                        placeholder="First Name"
+                                        name="firstName"
+                                        onChange={handleChange}
+                                        value={data.firstName}
+                                        required
+                                        className='eintrag'
+                                    />
+                                </div>
+                                <div className='eintrag-name'>
+                                    <div className='Title'>Nachname</div>
+                                    <input
+                                        type="text"
+                                        placeholder="Last Name"
+                                        name="lastName"
+                                        onChange={handleChange}
+                                        value={data.lastName}
+                                        required
+                                        className='eintrag'
+                                    /></div>
+                            </div>
+
+                            <div className='eintrag'>
+                                <div className='Title'>Email</div>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    name="email"
+                                    onChange={handleChange}
+                                    value={data.email}
+                                    required
+                                    className='eintrag'
+                                /></div>
+
+                            <div className='eintrag'>
+                                <div className='Title'>Passwort</div>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name="password"
+                                    onChange={handleChange}
+                                    value={data.password}
+                                    required
+                                    className='eintrag'
+                                /></div>
+
                             {error && <div className={Register.error_msg}>{error}</div>}
-                            <button type="submit" className="save" action="/LandingPage">
-                                Sing Up
-                            </button>
-                            <Link to="/login">
-                        <form className="save">
-                            <button type="button"> Sing in </button>
-                        </form>
-                    </Link>
+
+                            <label className="checkbox">
+                                <div className='checktext'>Ich habe die AGB gelesen und akzeptiere sie.</div>
+                                <input type="checkbox" defaultChecked="checked" />
+                            </label>
+
+                            <div className='Anmelden'>
+                                <form className="save" action="/LandingPage">
+                                    <button type="submit">Registrieren</button>
+                                </form>
+                                <div className="reg">Hast du schon ein Account? <a href="/Login" class="bold-text">Anmelden!</a></div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <div className='blue'></div>
+
             <Footer />
         </>
     );
