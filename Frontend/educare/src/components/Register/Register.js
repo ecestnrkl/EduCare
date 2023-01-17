@@ -87,7 +87,7 @@ const Signup = () => {
                             </button>
                             <Link to="/login">
                         <form className="save">
-                            <button type="button"> Sing in </button>
+                            <button type="button" action="/LandingPage"> Login </button>
                         </form>
                     </Link>
                         </form>

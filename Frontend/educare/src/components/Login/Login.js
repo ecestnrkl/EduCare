@@ -70,7 +70,7 @@ const Login = () => {
                         </div>
                         <div>
                             <h1>New Here ?</h1>
-                            <Link to="/signup">
+                            <Link to="/register">
                                 <button type="button" className="save">
                                     Sing Up
                                 </button>
