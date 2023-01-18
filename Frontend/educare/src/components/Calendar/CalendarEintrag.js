@@ -21,13 +21,13 @@ export default function CalendarEintrag() {
                     </ul>
                 </div>
                 <ul className="weekdays">
-                    <li>Mo</li>
-                    <li>Di</li>
-                    <li>Mi</li>
-                    <li>Do</li>
-                    <li>Fr</li>
-                    <li>Sa</li>
-                    <li>So</li>
+                    <li>M</li>
+                    <li>D</li>
+                    <li>M</li>
+                    <li>D</li>
+                    <li>F</li>
+                    <li>S</li>
+                    <li>S</li>
                 </ul>
                 <ul className="days">
                     <li>1</li>
