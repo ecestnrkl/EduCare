@@ -139,7 +139,7 @@ body {
 
   .weekdays li,
   .days li {
-    width: 12.5%;
+    width: 14%;
   }
 
   .days li .active {
