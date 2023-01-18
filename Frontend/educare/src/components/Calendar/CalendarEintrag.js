@@ -53,15 +53,15 @@ export default function CalendarEintrag() {
                     <li>17</li>
                     <li>18</li>
                     <li>19</li>
-                    <li>20</li>
+                    <li>
+                        <form action="/CalendarEintrag">
+                            <button className="active">20</button>
+                        </form>
+                    </li>
                     <li>21</li>
                     <li>22</li>
                     <li>23</li>
-                    <li>
-                        <form action="/CalendarEintrag">
-                            <button className="active">24</button>
-                        </form>
-                    </li>
+                    <li>24</li>
                     <li>25</li>
                     <li>26</li>
                     <li>27</li>
