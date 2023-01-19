@@ -37,15 +37,15 @@ h1 {
   .login {
     background-color: #214ddb;
   }
-}
-
-@media screen and (min-width:800px) {
   .Register {
     background-color: #214ddb;
   }
 }
 
 @media screen and (max-width:600px) {
+  .Submit button, .Wrapper button {
+    border-color: #FF8C1D;
+  }
   button {
     background-color: #FF8C1D !important;
   }
