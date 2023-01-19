@@ -36,6 +36,6 @@ export const MenuPageContent = [
         title: "Abmelden",
         path: "/HomePage",
         icon: <BiIcons.BiLogOut style={istyle} />,
-        cName: "nav-text-abmelden",
+        cName: "nav-text",
     },
 ]

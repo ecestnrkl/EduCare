@@ -115,6 +115,11 @@
   width: 100%;
 }
 
+.homepage .blue {
+  background-color: #214ddb;
+  height: 100vh;
+}
+
 /* für laptop */
 @media screen and (min-width:800px) {
   .homepage-content {

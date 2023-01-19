@@ -74,6 +74,16 @@
     letter-spacing: 0.15rem;
 }
 
+.Anmelden button:hover {
+    background-color: #FF8C1D;
+    border-color: #FF8C1D;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px 3px rgba(58, 38, 7, 0.2);
+    transition: 0.3s;
+  
+}
+
 .error_msg {
 	width: 370px;
 	padding: 15px;
@@ -123,7 +133,8 @@
     .blue {
         background-color: #214ddb;
         bottom:0;
-        height: 70px;
+        width: auto;
+        height: 300px;
     }
     .login{
         padding-top: 50px;
