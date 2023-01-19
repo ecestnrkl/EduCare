@@ -53,7 +53,6 @@
 
 
 
-
 // import './component/MenuPage.css';
 import './App.css';
 import MenuPage from './pages/MenuPage';
@@ -64,13 +63,19 @@ import ReportsPage from './pages/ReportsPage';
 import LandingPage from './pages/LandingPage';
 import Settings from './pages/Settings';
 import SettingsAddChild from './components/Settings/SettingsAddChild';
-
 import { Route, Routes } from "react-router-dom"
 import Calendar from './pages/Calendar';
 import CalendarEintrag from './components/Calendar/CalendarEintrag';
 import ClassExemption from './components/ReportsPage/ClassExemption';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+const express = require("express");
+
+const app = express();
+
+app.use("/check", (req, res) => {
+  res.status(200).send("Funktioniert.")
+} )
 
 function App() {
   return (
@@ -94,4 +99,5 @@ function App() {
     </>
   )
 }
+
 export default App
