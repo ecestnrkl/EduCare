@@ -1,13 +1,12 @@
 /* Handy Ansicht*/
 
 /* Ab hier Settings Inhalt */
-.WrappTextBox {
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
 .TextBox {
     text-align: left;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+
     padding: 20px;
     border-radius: 20px;
     font-size: 15px;
@@ -17,9 +16,14 @@
     margin-right: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
+.kind {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
 
 /* SprachOption select für Sprachbutton */
 .TextBox input,
@@ -42,7 +46,7 @@ input:focus {
 .SprachOption {
     text-align: left;
     padding-bottom: 15px;
-}   
+}
 
 /* Text RIGHT */
 .Box input,
@@ -58,8 +62,10 @@ input:focus {
 .Box1 {
     justify-content: space-evenly;
 }
+
 .Box2 {
-justify-content: space-evenly;}
+    justify-content: space-evenly;
+}
 
 
 
@@ -76,17 +82,45 @@ justify-content: space-evenly;}
     float: left;
 }
 
-.button {
-   float: left;
-   margin-left: 20px;
+.SettingsAddChild .settings-container {
+    height: fit-content;
+    padding-bottom: 100px;
 }
+
+.SettingsAddChild button {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background-color: #FF8C1D;
+}
+
+.SettingsAddChild h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.AddChild button {
+    background-color: white !important;
+    color: black;
+    border: 3px solid #ADCCED;
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+.AddChild button:hover {
+  background-color: #ADCCED !important;
+  transition: 0.2s;
+}
+
 
 /* Halb Laptop Ansicht */
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
     .TextBox {
         column-count: 2;
-        
+
         column-gap: 100px;
         column-width: 150px;
 
@@ -107,5 +141,11 @@ justify-content: space-evenly;}
         text-align: left;
         width: 150px;
     }
-}
 
+    .SettingsAddChild button {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        background-color: dodgerblue;
+    }
+
+}

@@ -16,8 +16,6 @@ export default function ClassExemption() {
                 </form>
             </div>
             <form className="befreiungSeite" action="/ClassExemption">
-                <div className="balken">
-
                     <div className="befreiungstext">
                         <form name="myform" method="post" action="action.php">
                             <div className="b-text">
@@ -43,17 +41,16 @@ export default function ClassExemption() {
                                     <option value="Fahrprüfung">Fahrprüfung</option>
                                     <option value="sonstiges">Sonstiges</option>
                                 </select>
-                                <label for="text"><br /><br /><br />Mit freundlichen Grüßen, <br /> Isra Özdemir <br /> </label>
-                                
-                                <div className="Nachweis">
-                                    
-                                        <input class="custom-file-input" type="file" size="40" maxlength="100000"/>
+                                <label for="text"><br /><br /><br />Mit freundlichen Grüßen, <br /> Isra Özdemir <br /><br /> </label>
+
+                                <div className="nachweis">
+                                    <div className="nachweis-text"> Nachweis bei Gegebenheit</div>
+                                    <input class="custom-file-input" type="file" size="40" maxlength="100000" />
                                 </div>
 
                             </div>
                         </form>
                     </div>
-                </div>
                 <div className="Wrapper">
                     <button type="submit">Speichern</button>
                 </div>

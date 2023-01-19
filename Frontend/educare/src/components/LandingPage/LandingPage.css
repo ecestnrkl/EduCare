@@ -54,9 +54,9 @@
 
 .lutton button {
   padding: 10px 30px;
-  background-color: white;
+  background-color: white !important;
   color: black;
-  border: 3px solid #ADCCED;
+  border: 3px solid #ADCCED !important;
   cursor: pointer;
   border-radius: 40px;
   align-self: center;
@@ -69,7 +69,7 @@
 }
 
 .lutton button:hover {
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
 }
 
 /* Handy */

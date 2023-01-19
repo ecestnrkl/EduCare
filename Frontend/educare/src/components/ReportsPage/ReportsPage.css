@@ -1,4 +1,4 @@
-.balken {
+.b-text {
   width: 90%;
   max-width: 700px;
   box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
@@ -8,18 +8,14 @@
   text-align: left;
   margin: auto;
   margin-top: -50px;
-  padding: 10px;
-  padding-bottom: 3%;
+  padding: 30px;
+  padding-bottom: 10%;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-}
 
-.b-text {
   font-weight: bold;
   color: rgb(46, 46, 46);
   text-align: left;
-  margin-top: 20px;
-  margin-left: 8%;
 }
 
 .student-name {
@@ -27,13 +23,6 @@
   gap: 30px;
   margin-top: 10px;
   margin-bottom: -20px;
-}
-
-@media (max-width: 560px) {
-  .Balken {
-    min-width: 100px;
-    margin: 20px;
-  }
 }
 
 .krankmeldung {
@@ -47,7 +36,7 @@
 
 .b-text input,
 .student-name input {
-  background-color: #ecf9ff;
+  /* background-color: #ecf9ff; */
   width: 30%;
 }
 
@@ -92,9 +81,9 @@
 
 .krankmeldung1 button {
   padding: 10px 30px;
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
   color: black;
-  border: 3px solid #ADCCED;
+  border: 3px solid #ADCCED !important;
   cursor: pointer;
   border-radius: 40px;
   align-self: center;
@@ -107,7 +96,7 @@
 
 .befreiung button {
   padding: 10px 30px;
-  background-color: white;
+  background-color: white !important;
   color: black;
   border: 3px solid #ADCCED;
   cursor: pointer;
@@ -121,11 +110,11 @@
 }
 
 .befreiung button:hover {
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
 }
 
 .befreiung button::after {
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
 }
 
 /* Ab hier für ClassExemption */
@@ -169,7 +158,7 @@
 
 .krankmeldung2 button {
   padding: 10px 30px;
-  background-color: white;
+  background-color: white !important;
   color: black;
   border: 3px solid #ADCCED;
   cursor: pointer;
@@ -182,14 +171,14 @@
 }
 
 .krankmeldung2 button:hover {
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
 }
 
 .befreiung2 button {
   padding: 10px 30px;
-  background-color: #ADCCED;
+  background-color: #ADCCED !important;
   color: black;
-  border: 3px solid #ADCCED;
+  border: 3px solid #ADCCED !important;
   cursor: pointer;
   border-radius: 40px;
   align-self: center;
@@ -201,7 +190,9 @@
 
 /* Handy */
 @media screen and (max-width:800px) {
-
+  .b-text {
+    padding-bottom: 20%;
+  }
   .krankmeldung1 button,
   .befreiung button,
   .krankmeldung2 button,
@@ -217,32 +208,24 @@
     text-align: left;
     padding-bottom: 10%;
   }
-
-  .Nachweis {
-    font-size: medium;
-    padding: 10px;
-    margin-right: 15%;
-  }
-
 }
 
-
-.Nachweis {
-  display: inline;
-  padding: 10px;
-  padding-left: 0px;
+.nachweis {
   float: left;
 }
-
-
 .nachweis-text {
-  padding-top: -20px;
+  padding-top: -20px;;
 }
 
-
 /* file input */
+.nachweis input {
+width: fit-content;
+}
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
+  border-radius: 20px;  
+  padding-top: 20px;
+  width: fit-content;
 }
 
 .custom-file-input::before {
@@ -257,7 +240,11 @@
 }
 .custom-file-input:hover::before {
   border-color: black;
+  border-radius: 20px;
+
 }
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  border-radius: 20px;
+
 }

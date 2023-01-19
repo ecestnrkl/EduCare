@@ -93,16 +93,16 @@ body {
 
 .days li .active {
   padding: 5px;
-  background: white;
-  color: rgb(38, 89, 241);
-  border-color: rgb(38, 89, 241);
+  background: white !important;
+  color: rgb(38, 89, 241) !important;
+  border-color: rgb(38, 89, 241) !important;
   border-radius: 100px;
   margin-top: 0;
 }
 
 .notactive{
   padding: 5px;
-  background: rgb(38, 89, 241);
+  background: rgb(38, 89, 241) !important;
   color: white;
   border-radius: 100px;
   margin-top: 0;
@@ -111,7 +111,7 @@ body {
 .notactive2{
   padding: 5px;
   width: 30px;
-  background: rgb(38, 89, 241);
+  background: rgb(38, 89, 241) !important;
   color: white;
   border-radius: 200px;
   margin-top: 0;
@@ -187,7 +187,7 @@ body {
   padding: 5px 20px;
   margin: auto;
   color: rgb(0, 0, 0);
-  background-color: #D7E8F7;
+  background-color: #D7E8F7 !important;
   font-size: 18px;
   border-radius: 50px;
   border: none;
@@ -200,7 +200,7 @@ body {
 }
 
 .btn:hover{
-  background-color: rgb(38, 89, 241);
+  background-color: rgb(38, 89, 241) !important;
   width: 300px;
   box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2);
   color: white;
@@ -228,7 +228,7 @@ body {
   transition: 0.3s;
   padding: 20px;
   border-radius: 10px;
-  background-color: #D7E8F7;
+  background-color: #D7E8F7 !important;
   text-align: left;
   letter-spacing: 1px;
   outline: none;

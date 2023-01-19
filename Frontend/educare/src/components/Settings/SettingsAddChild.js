@@ -14,8 +14,8 @@ export default function SettingsAddChild() {
     })
 
     function handleChange(event) {
-        const {name, value} = event.target;
-        
+        const { name, value } = event.target;
+
         setInput(prevInput => {
             return {
                 ...prevInput,
@@ -39,45 +39,13 @@ export default function SettingsAddChild() {
     }
 
     return (
-        <div>
+        <div className='SettingsAddChild'>
             <h1>Einstellungen</h1>
             <div className='settings-container'>
-            <div className='TextBox'>
-                <div className='Schule'>
-                    <div className='Box'>
-                        <label for="Schule">Schule: </label>
-                        <input onChange={handleChange} value={input.schule} type="text" id="schule" name="school" placeholder=""/>
-                    </div>
-                </div>
-                    <div className='Box'>
-                        <label for="fname">Vorname des Kindes: </label>
-                        <input onChange={handleChange} value={input.fname} type="text" id="fname" name="fname" placeholder=""/>
-                    </div>
-                    <div className='Box'>
-                        <label for="lname">Nachname des Kindes: </label>
-                        <input onChange={handleChange} value={input.lname} type="text" id="lname" name="lname" placeholder=""/>
-                    </div>
-                    <div className='Box'>
-                        <label for="class">Klasse: </label>
-                        <input onChange={handleChange} value={input.klasse} type="text" id="klasse" name="klasse" placeholder="7b"/>
-                    </div>
-                    <div className='Box'>
-                        <label for="teacher">Klassenlehrer: </label>
-                        <input onChange={handleChange} value={input.teacher} type="text" id="teacher" name="teacher" placeholder="Wolfgang Stein"/>
-                    </div>
-                    <div className='Box'>
-                        <label for="email">Lehrer Kontakt: </label>
-                        <input onChange={handleChange} value={input.email} type="email" id="email" name="email" placeholder="wolfstein@hm.edu"/>
-                    </div>
-                    <div className='Submit'>
-                <form className="save" action="/Settings">
-                    <button onClick={handleClick} type="submit">Speichern</button>
-                </form>
-            </div>
-            </div>
 
-            <div className='TextBox'>
-
+                <div className='kind'>
+                    <h2>Kind 1</h2>
+                    <div className='TextBox'>
                         <div className='Box1'>
                             <div className='Schule'>
                                 <div className='Box'>
@@ -126,10 +94,50 @@ export default function SettingsAddChild() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='kind'>
+                    <h2>Kind 2</h2>
+                <div className='TextBox'>
+                    <div className='Schule'>
+                        <div className='Box'>
+                            <label for="Schule">Schule: </label>
+                            <input onChange={handleChange} value={input.schule} type="text" id="schule" name="school" placeholder="" />
+                        </div>
                     </div>
-            
+                    <div className='Box'>
+                        <label for="fname">Vorname des Kindes: </label>
+                        <input onChange={handleChange} value={input.fname} type="text" id="fname" name="fname" placeholder="" />
+                    </div>
+                    <div className='Box'>
+                        <label for="lname">Nachname des Kindes: </label>
+                        <input onChange={handleChange} value={input.lname} type="text" id="lname" name="lname" placeholder="" />
+                    </div>
+                    <div className='Box'>
+                        <label for="class">Klasse: </label>
+                        <input onChange={handleChange} value={input.klasse} type="text" id="klasse" name="klasse" placeholder="7b" />
+                    </div>
+                    <div className='Box'>
+                        <label for="teacher">Klassenlehrer: </label>
+                        <input onChange={handleChange} value={input.teacher} type="text" id="teacher" name="teacher" placeholder="Wolfgang Stein" />
+                    </div>
+                    <div className='Box'>
+                        <label for="email">Lehrer Kontakt: </label>
+                        <input onChange={handleChange} value={input.email} type="email" id="email" name="email" placeholder="wolfstein@hm.edu" />
+                    </div>
+                    </div>
+                    </div>
 
-            <Footer/>
+                <div className='Submit'>
+                    <form className="save" action="/Settings">
+                        <button onClick={handleClick} type="submit">Speichern</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+
+            <Footer />
         </div>
     )
 }

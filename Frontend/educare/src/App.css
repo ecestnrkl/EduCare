@@ -7,7 +7,7 @@
   color: #ffffff;
 }
 
-h1{
+h1 {
   margin-bottom: 50px;
   margin-top: 50px;
   /* Muss man bei indexhtml downloaden */
@@ -19,7 +19,7 @@ h1{
 }
 
 * {
-  text-align:center;
+  text-align: center;
   margin-bottom: 50px;
   margin-top: 50px;
   box-sizing: border-box;
@@ -34,20 +34,27 @@ h1{
 }
 
 @media screen and (min-width:800px) {
-.login {
-  background-color: #214ddb;
-}}
+  .login {
+    background-color: #214ddb;
+  }
+}
 
 @media screen and (min-width:800px) {
   .Register {
     background-color: #214ddb;
-  }}
+  }
+}
 
+@media screen and (max-width:600px) {
+  button {
+    background-color: #FF8C1D !important;
+  }
+}
 
 button {
   padding: 10px 20px;
   background-color: dodgerblue;
-  border: 1px solid #ddd;
+  border: 2px solid dodgerblue;
   color: white;
   cursor: pointer;
   border-radius: 20px;
@@ -57,19 +64,27 @@ button {
   font-family: "Montserrat", sans-serif;
   left: 410px;
   top: -61px;
+  font-weight: bold;
+
+}
+
+.AddChild button {
+  background-color: dodgerblue !important;
 }
 
 button:hover {
-  background-color: #ff9225;
+  background-color: #ff9225 !important;
+  border: 2px solid #ff9225;
+  transition: 0.2s;
 }
 
 .Wrapper {
   /* Float both forms to the left */
-justify-content: center;
-/* borders added for visibility. Just remove them */
- }
+  justify-content: center;
+  /* borders added for visibility. Just remove them */
+}
 
-p{
+p {
   margin-bottom: 50px;
   margin-top: 50px;
   margin-left: 50px;
