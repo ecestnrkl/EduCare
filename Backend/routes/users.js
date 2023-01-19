@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Users, validate } = require("../models/users");
+const { User, validate } = require("../models/user");
 const bcrypt = require("bcrypt");
 
 router.post("/", async (req, res) => {
