@@ -283,7 +283,6 @@ hr{
 
 .Nachricht p{
   font-size: 11px;
-  font-weight: bold;
   text-align: left;
   margin-left: 0;
 }
@@ -339,7 +338,8 @@ hr{
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  border: #666;
+  border: 4px;
+  border-style: ridge;
   color: black;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
