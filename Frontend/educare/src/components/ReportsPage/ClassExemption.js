@@ -44,13 +44,12 @@ export default function ClassExemption() {
                                     <option value="sonstiges">Sonstiges</option>
                                 </select>
                                 <label for="text"><br /><br /><br />Mit freundlichen Grüßen, <br /> Isra Özdemir <br /> </label>
-                                <label className="nachweis-text"> <br /> <br />Nachweis (bei Gegebenheit): </label>
+                                
                                 <div className="Nachweis">
-                                    <form method="post" action="ClassExemption" enctype="multipart/form-data">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-                                        <input type="file" name="datei" size="40" maxlength="100000" />
-                                    </form>
+                                    
+                                        <input class="custom-file-input" type="file" size="40" maxlength="100000"/>
                                 </div>
+
                             </div>
                         </form>
                     </div>

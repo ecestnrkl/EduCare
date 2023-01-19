@@ -32,31 +32,17 @@ export default function Settings() {
                             <div className='Box'>
                                 <label for="pwd">Passwort: </label>
                                 <input type="password" id="pwd" name="pwd" placeholder="●●●●●●●●●" />
-                                {/* </div>
-                        <div className='SprachOption'>
-                            <label for="Sprache">Sprache: </label>
-                            <select id="Sprache" name="Sprache">
-                                <option value="Sprache1">Deutsch</option>
-                                <option value="Sprache1">English</option>
-                                <option value="Sprache1">Français</option>
-                                <option value="Sprache1">Magyar</option>
-                                <option value="Sprache1">Türk</option>
-                                <option value="Sprache1">Kurdî</option>
-                                <option value="Sprache1">русский</option>
-                                <option value="Sprache1">فارسی</option>
-                                <option value="Sprache1">عربى</option>
-                            </select> */}
                             </div>
                         </div>
 
                         <div className="Box2">
                             <div className='Box'>
-                                <label for="fnamek">Vorname Kind: </label>
-                                <input type="text" id="fnamek" name="fnamek" placeholder="Vorname Kind" />
+                                <label for="fname">Vorname Kind: </label>
+                                <input type="text" id="fname" name="fname" placeholder="Vorname Kind" />
                             </div>
                             <div className='Box'>
-                                <label for="lnamek">Nachname Kind: </label>
-                                <input type="text" id="lnamek" name="lnamek" placeholder="Nachname Kind" />
+                                <label for="lname">Nachname Kind: </label>
+                                <input type="text" id="lname" name="lname" placeholder="Nachname Kind" />
                             </div>
                             <div className='Box'>
                                 <label for="class">Klasse: </label>
@@ -80,12 +66,13 @@ export default function Settings() {
                             </form>
                         </div>
                         <div className='Submit'>
-                            <form className="save" action="/HomePage">
+                            <form className="save" action="/Settings">
                                 <button type="submit">Speichern</button>
                             </form>
                         </div>
                     </div>
                 </div>
+
             </div>
             <Footer />
 
