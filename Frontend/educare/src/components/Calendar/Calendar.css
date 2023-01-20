@@ -106,6 +106,7 @@ body {
   color: white;
   border-radius: 100px;
   margin-top: 0;
+  border-color: rgb(38, 89, 241) !important;
 }
 
 .notactive2{
@@ -115,6 +116,7 @@ body {
   color: white;
   border-radius: 200px;
   margin-top: 0;
+  border-color: rgb(38, 89, 241) !important;
 }
 
 .notactive:hover, .notactive2:hover{
