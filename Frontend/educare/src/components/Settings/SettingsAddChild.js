@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import "./Settings.css"
 import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom'
 
 export default function SettingsAddChild() {
     const [input, setInput] = useState({
@@ -126,13 +127,12 @@ export default function SettingsAddChild() {
                     </div>
                     </div>
                     </div>
-
+                    
                 <div className='Submit'>
-                    <form className="save" action="/Settings">
+                    <Link className="save" to="/SettingsAddChild">
                         <button onClick={handleClick} type="submit">Speichern</button>
-                    </form>
+                    </Link>
                 </div>
-
 
             </div>
 

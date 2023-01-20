@@ -43,7 +43,7 @@ export default function CalendarEintrag() {
                     <li>10</li>
                     <li>
                         <form>
-                            <button className="notactive2">11</button>
+                            <button className="notactive3">11</button>
                         </form>
                     </li>
                     <li>12</li>

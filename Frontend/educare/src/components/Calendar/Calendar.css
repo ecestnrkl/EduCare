@@ -109,7 +109,7 @@ body {
   border-color: rgb(38, 89, 241) !important;
 }
 
-.notactive2{
+.notactive2, .notactive3{
   padding: 5px;
   width: 30px;
   background: rgb(38, 89, 241) !important;
@@ -119,7 +119,7 @@ body {
   border-color: rgb(38, 89, 241) !important;
 }
 
-.notactive:hover, .notactive2:hover{
+.notactive:hover, .notactive3:hover, .notactive2:hover{
   padding: 5px;
   background: white !important;
   color: rgb(38, 89, 241);
