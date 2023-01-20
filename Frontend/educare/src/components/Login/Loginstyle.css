@@ -130,11 +130,11 @@
         height: 37%;
         margin-left: 40px;
     }
-    .blue {
+    .l_blue {
         background-color: #214ddb;
         bottom:0;
         width: auto;
-        height: 300px;
+        height: 100px;
     }
     .login{
         padding-top: 50px;

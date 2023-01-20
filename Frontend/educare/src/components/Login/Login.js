@@ -78,8 +78,8 @@ const Login = () => {
                             </form>
                         </div>
                     </div>
-                    <div className='blue'></div>
                 </div>
+                <div className='l_blue'></div>
                 <Footer />
             </>
         </>

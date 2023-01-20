@@ -17,14 +17,6 @@
     padding-bottom: 30px;
 }
 
-.lutton button::before {
-    background-color:red;
-}
-
-.lutton button::after {
-    background-color:red;
-}
-
 .namen,
 .namen input {
     display: flex;
