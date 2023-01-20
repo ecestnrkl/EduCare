@@ -1,5 +1,6 @@
 import "./ReportsPage.css"
 import React from "react"
+import { Link } from 'react-router-dom'
 
 export default function SickNote() {
     return (
@@ -20,12 +21,13 @@ export default function SickNote() {
                             <option value="covid">Covid-Symptome</option>
                             <option value="magen">Magen Darm Virus</option>
                         </select>
-                        </div>
-                        </div>
-
-                    <div className="Wrapper">
-                        <button type="submit">Speichern</button>
                     </div>
+                </div>
+
+                <div className="Wrapper">
+                    <Link to="/ClassExemption">
+                        <button type="submit" >Speichern</button>
+                    </Link>                    </div>
             </form>
         </div>
     )

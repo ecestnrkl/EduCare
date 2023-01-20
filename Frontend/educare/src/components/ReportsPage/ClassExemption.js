@@ -50,7 +50,9 @@ export default function ClassExemption() {
                         </form>
                     </div>
                 <div className="Wrapper">
-                    <button type="submit">Speichern</button>
+                <Link to="/ClassExemption">
+                    <button type="submit" >Speichern</button>
+                </Link>
                 </div>
             </form>
         </div><Footer /></>
