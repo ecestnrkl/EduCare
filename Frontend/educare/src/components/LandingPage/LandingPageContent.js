@@ -1,4 +1,5 @@
 import image from '../image/HomePageImage.png';
+import { Link } from 'react-router-dom'
 
 export default function LandingPageContent() {
     return (
@@ -12,13 +13,13 @@ export default function LandingPageContent() {
                 Interkulturelle Verständigung ist uns als EduCare sehr wichtig, weshalb wir auch für die Kommunikation mit über 130 Sprachen anbieten um so, Missverständnisse zu vermeiden!</div>
             <div className='Wrapper'>
                 <div className='Calendar'>
-                    <form className="lutton" action="/Calendar">
-                        <button type="submit">Kalender</button>
+                    <form className="lutton">
+                        <button type="submit"><Link className='linky' to="/Calendar">Kalender</Link></button>
                     </form>
                 </div>
                 <div className='Reports'>
-                    <form className="lutton" action="/ReportsPage">
-                        <button type="submit">Meldungen</button>
+                    <form className="lutton">
+                        <button type="submit"><Link className='linky' to="/ReportsPage">Meldungen</Link></button>
                     </form>
                 </div>
             </div>

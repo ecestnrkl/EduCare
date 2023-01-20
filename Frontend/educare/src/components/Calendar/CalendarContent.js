@@ -39,7 +39,7 @@ export default function CalendarContent() {
                     <li>9</li>
                     <li>10</li>
                     <li>
-                        <form action="">
+                        <form>
                             <button className="notactive2">11</button>
                         </form>
                     </li>
@@ -51,7 +51,8 @@ export default function CalendarContent() {
                     <li>17</li>
                     <li>18</li>
                     <li>19</li>
-                    <li><form>
+                    <li>
+                    <form>
                         <Link to="/CalendarEintrag">
                             <button className="notactive">20</button>
                         </Link>

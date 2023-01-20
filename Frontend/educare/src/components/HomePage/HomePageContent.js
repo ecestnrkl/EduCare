@@ -16,6 +16,7 @@ export default function HomePageContent() {
                     <h1>Verständigung</h1>
                     <h1>ist uns wichtig</h1>
                 </div>
+
                 <div className='register'>
                     <Link to="/Login" class="wutton">Anmelden</Link>
 

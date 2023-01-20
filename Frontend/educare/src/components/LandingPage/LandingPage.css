@@ -52,6 +52,11 @@
   gap: 20px;
 }
 
+.linky {
+  text-decoration: none;
+  color: black;
+}
+
 .lutton button {
   padding: 10px 30px;
   background-color: white !important;

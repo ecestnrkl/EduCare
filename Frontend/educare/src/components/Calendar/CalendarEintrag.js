@@ -4,6 +4,7 @@ import * as AiIcons from "react-icons/ai";
 import * as BsIcons from "react-icons/bs";
 import "./Calendar.css"
 import Footer from "../Footer/Footer";
+import { Link } from 'react-router-dom'
 
 export default function CalendarEintrag() {
     return (
@@ -41,7 +42,7 @@ export default function CalendarEintrag() {
                     <li>9</li>
                     <li>10</li>
                     <li>
-                        <form action="">
+                        <form>
                             <button className="notactive2">11</button>
                         </form>
                     </li>
@@ -54,9 +55,11 @@ export default function CalendarEintrag() {
                     <li>18</li>
                     <li>19</li>
                     <li>
-                        <form action="/CalendarEintrag">
+                    <form>
+                        <Link to="/CalendarEintrag">
                             <button className="active">20</button>
-                        </form>
+                        </Link>
+                    </form>
                     </li>
                     <li>21</li>
                     <li>22</li>

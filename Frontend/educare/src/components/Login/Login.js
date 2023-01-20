@@ -4,6 +4,7 @@ import React from 'react'
 import image from '../image/sit.png';
 import Footer from '../Footer/Footer';
 import Loginstyle from './Loginstyle.css';
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     const [data, setData] = useState({ email: "", password: "" });
@@ -69,12 +70,16 @@ const Login = () => {
                                 </div>
                                 {error && <div className={Loginstyle.error_msg}>{error}</div>}
                                 <div className='pass'>Passwort Vergessen?</div>
+
+
                                 <div className='Anmelden'>
-                                    <form className="save" action="/Landingpage">
-                                        <button type="submit">Anmelden</button>
-                                        <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
-                                    </form>
+                                    <Link className='linky' to="/Landingpage">
+                                        <button type="submit">Anmelden</button></Link>
+
+                                        <div className="reg">Noch kein Account? 
+                                        <Link to="/Register" class="bold-textw"> Registrieren!</Link></div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
