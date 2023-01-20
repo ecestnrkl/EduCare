@@ -106,11 +106,11 @@ export default function SettingsAddChild() {
                         </div>
                     </div>
                     <div className='Box'>
-                        <label for="fname">Vorname des Kindes: </label>
+                        <label for="fname">Vorname Kind: </label>
                         <input onChange={handleChange} value={input.fname} type="text" id="fname" name="fname" placeholder="" />
                     </div>
                     <div className='Box'>
-                        <label for="lname">Nachname des Kindes: </label>
+                        <label for="lname">Nachname Kind: </label>
                         <input onChange={handleChange} value={input.lname} type="text" id="lname" name="lname" placeholder="" />
                     </div>
                     <div className='Box'>

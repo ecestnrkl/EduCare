@@ -27,7 +27,8 @@ export default function SickNote() {
                 <div className="Wrapper">
                     <Link to="/ClassExemption">
                         <button type="submit" >Speichern</button>
-                    </Link>                    </div>
+                    </Link>                    
+                    </div>
             </form>
         </div>
     )
