@@ -81,9 +81,9 @@ export default function CalendarEintrag() {
             </div>
             <br />
             <div>
-                <form action="/Calendar">
+                <Link to="/Calendar">
                     <button type="submit" className="btn">Eintrag hinzufügen <i className="plus"><AiIcons.AiOutlinePlusCircle /></i></button>
-                </form>
+                </Link>
             </div>
             <br />
             <div className='Eintrag'>

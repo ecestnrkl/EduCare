@@ -1,21 +1,19 @@
 import "./ReportsPage.css"
 import React from "react"
 import Footer from '../Footer/Footer';
-
+import { Link } from 'react-router-dom'
 
 export default function ClassExemption() {
     return (
         <><div>
             <h1> Meldungen </h1>
             <div className='Wrapper'>
-                <form className="krankmeldung2" action="/ReportsPage">
-                    <button type="submit">Krankmeldung</button>
-                </form>
-                <form className="befreiung2" action="/ClassExemption">
-                    <button type="submit">Befreiung</button>
-                </form>
+            
+            <Link className="krankmeldung2" to="/ReportsPage"><button type="submit">Krankmeldung</button></Link>
+            <Link className="befreiung2" to="/ClassExemption"><button type="submit">Befreiung</button></Link>
+            
             </div>
-            <form className="befreiungSeite" action="/ClassExemption">
+            <form className="befreiungSeite">
                     <div className="befreiungstext">
                         <form name="myform" method="post" action="action.php">
                             <div className="b-text">

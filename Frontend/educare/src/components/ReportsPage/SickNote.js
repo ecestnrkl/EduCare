@@ -4,7 +4,7 @@ import React from "react"
 export default function SickNote() {
     return (
         <div>
-            <form className="krankmeldung" action="/ReportsPage">
+            <form className="krankmeldung">
                 <div className="balke">
                     <div className="tag">
                         <label for="input">Von: </label>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import React from 'react'
 import Footer from '../Footer/Footer';
 import Register from './Register.css';
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
     const [data, setData] = useState({
@@ -117,11 +118,14 @@ const Signup = () => {
                             </label>
 
                             <div className='Anmelden'>
-                                <form className="save" action="/LandingPage">
-                                    <button type="submit">Registrieren</button>
-                                </form>
-                                <div className="reg">Hast du schon ein Account? <a href="/Login" class="bold-text">Anmelden!</a></div>
-                            </div>
+                                    <Link className='linky' to="/Landingpage">
+                                        <button type="submit">Registrieren</button></Link>
+
+                                        <div className="reg">Noch kein Account? 
+                                        <Link to="/Login" class="bold-textw"> Anmelden!</Link></div>
+                                </div>
+
+
                         </form>
                     </div>
                 </div>

@@ -27,12 +27,14 @@ function MenuPage() {
           <GoIcons.GoThreeBars onClick={showSidebar} style={style} />
         </Link>
         <header>
-          <a href="/LandingPage">
+
+          <Link to="/LandingPage">
             <img
               src={logo}
               className="educare-logo"
               alt="logo" />
-          </a>
+          </Link>
+          
           {/* <button onClick={handleLogout}>
 					Logout
 				</button> */}
