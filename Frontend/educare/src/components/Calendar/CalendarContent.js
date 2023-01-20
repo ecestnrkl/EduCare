@@ -38,11 +38,7 @@ export default function CalendarContent() {
                     <li>8</li>
                     <li>9</li>
                     <li>10</li>
-                    <li>
-                        <form>
-                            <button className="notactive3">11</button>
-                        </form>
-                    </li>
+                    <li>11</li>
                     <li>12</li>
                     <li>13</li>
                     <li>14</li>

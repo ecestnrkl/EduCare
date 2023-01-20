@@ -1,6 +1,7 @@
 import React from 'react';
 import "../components/Settings/Settings.css"
 import Footer from '../components/Footer/Footer';
+import { Link } from 'react-router-dom'
 
 export default function Settings() {
     return (
@@ -61,18 +62,18 @@ export default function Settings() {
 
                     <div className='Wrapper'>
                         <div className='AddChild'>
-                            <form className="AddChild" action="/SettingsAddChild">
-                                <button type="submit">Kind Hinzufügen</button>
+                            <form className="AddChild">
+                                <button type="submit"><Link to="/SettingsAddChild" className='linky'>Kind Hinzufügen</Link></button>
                             </form>
                         </div>
-                        <div className='Submit'>
-                            <form className="save" action="/Settings">
-                                <button type="submit">Speichern</button>
+                    <div className='Submit'>
+                            <form className="save">
+                                <button type="submit"><Link to="/Settings" className='binky'>Speichern</Link></button>
                             </form>
                         </div>
                     </div>
-                </div>
 
+                        </div>
             </div>
             <Footer />
 
