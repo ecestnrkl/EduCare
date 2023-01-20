@@ -47,14 +47,14 @@ const Signup = () => {
 
                     <div className='Wrapper'>
                         <div className='Calendar'>
-                            <form className="lutton">
+                            <Link to="/Register" className="lutton">
                                 <button type="submit">Lehrer</button>
-                            </form>
+                            </Link>
                         </div>
                         <div className='Reports'>
-                            <form className="lutton">
+                            <Link to="/Register"className="lutton">
                                 <button type="submit">Elternteil</button>
-                            </form>
+                            </Link>
                         </div>
                     </div>
                     <div>
