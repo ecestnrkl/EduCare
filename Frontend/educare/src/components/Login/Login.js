@@ -4,8 +4,6 @@ import React from 'react'
 import image from '../image/sit.png';
 import Footer from '../Footer/Footer';
 import Loginstyle from './Loginstyle.css';
-import { useNavigate } from "react-router-dom";
-import { Button } from "react-router-dom";
 
 const Login = () => {
     const [data, setData] = useState({ email: "", password: "" });
@@ -33,70 +31,59 @@ const Login = () => {
         }
     };
 
-    {let navigate = useNavigate();
-    const routeChange = () => {
-        let path = `newPath`;
-        navigate(path);}
-
-        return (
+    return (
+        <>
             <>
-                <>
-                    <div className='login'>
-                        <img
-                            src={image}
-                            className="login-pic"
-                            alt="Login" />
-                        <div className='loginBox'>
-                            <div>
-                                <form onSubmit={handleSubmit}>
-                                    <h1>Anmelden</h1>
-                                    <div className='eintrag'>
-                                        <div className='Title'>Email</div>
-                                        <input
-                                            type="email"
-                                            placeholder="Email"
-                                            name="email"
-                                            onChange={handleChange}
-                                            value={data.email}
-                                            required
-                                            className='eintrag'
-                                        />
-                                    </div>
-                                    <div className='eintrag'>
-                                        <div className='Title'>Passwort</div>
-                                        <input
-                                            type="password"
-                                            placeholder="Password"
-                                            name="password"
-                                            onChange={handleChange}
-                                            value={data.password}
-                                            required
-                                            className='eintrag'
-                                        />
-                                    </div>
-                                    {error && <div className={Loginstyle.error_msg}>{error}</div>}
-                                    <div className='pass'>Passwort Vergessen?</div>
-                                    <div className='Anmelden'>
-                                        <form className="save" action="/Landingpage">
-                                            <button type="submit">Anmelden</button>
-                                            <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
-                                        </form>
-                                    </div>
-                                    <Button color="primary" className="Anmelden"
-                                        onClick={routeChange}>
-                                        Login
-                                    </Button>
-
-                                </form>
-                            </div>
+                <div className='login'>
+                    <img
+                        src={image}
+                        className="login-pic"
+                        alt="Login" />
+                    <div className='loginBox'>
+                        <div>
+                            <form onSubmit={handleSubmit}>
+                                <h1>Anmelden</h1>
+                                <div className='eintrag'>
+                                    <div className='Title'>Email</div>
+                                    <input
+                                        type="email"
+                                        placeholder="Email"
+                                        name="email"
+                                        onChange={handleChange}
+                                        value={data.email}
+                                        required
+                                        className='eintrag'
+                                    />
+                                </div>
+                                <div className='eintrag'>
+                                    <div className='Title'>Passwort</div>
+                                    <input
+                                        type="password"
+                                        placeholder="Password"
+                                        name="password"
+                                        onChange={handleChange}
+                                        value={data.password}
+                                        required
+                                        className='eintrag'
+                                    />
+                                </div>
+                                {error && <div className={Loginstyle.error_msg}>{error}</div>}
+                                <div className='pass'>Passwort Vergessen?</div>
+                                <div className='Anmelden'>
+                                    <form className="save" action="/Landingpage">
+                                        <button type="submit">Anmelden</button>
+                                        <div className="reg">Noch kein Account? <a href="/Register" class="bold-text">Registrieren!</a></div>
+                                    </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div className='l_blue'></div>
-                    <Footer />
-                </>
+                </div>
+                <div className='l_blue'></div>
+                <Footer />
             </>
-        );
-    }
-    };
+        </>
+    );
+};
 
-    export default Login;
+export default Login;
