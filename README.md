@@ -6,6 +6,7 @@
  Dafür muss man im Terminal diese commands eingeben:<br><br>
  ```cd Frontend``` <br>
  ```cd educare``` <br>
+ ```npm i``` <br>
  ```npm start``` <br>
 
  ## Team Educare
