@@ -36,6 +36,8 @@ const Login = () => {
         <>
             <>
                 <div className='login'>
+                <div className='l_blue'></div>
+
                     <img
                         src={image}
                         className="login-pic"
@@ -84,7 +86,6 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
-                <div className='l_blue'></div>
                 <Footer />
             </>
         </>

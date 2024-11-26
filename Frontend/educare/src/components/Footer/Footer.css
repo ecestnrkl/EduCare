@@ -1,10 +1,10 @@
 /* Grundlegende Gestaltung für den Footer */ 
 .site-footer {
-  font-size: 16px; 
+  font-size: 1rem; 
   background-color: rgb(38, 89, 241);
   color: white; 
   text-align: right; 
-  padding: 1rem;
+  padding: 0.5rem;
   position: fixed;
   bottom: 0;
   width: 100%;

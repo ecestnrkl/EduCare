@@ -56,15 +56,15 @@ export default function SettingsAddChild() {
                             </div>
                             <div className='Box'>
                                 <label for="fname">Vorname: </label>
-                                <input type="text" id="fname" name="fname" placeholder="Vorname Elternteil" />
+                                <input type="text" id="fname" name="fname" placeholder="Vorname" />
                             </div>
                             <div className='Box'>
                                 <label for="lname">Nachname: </label>
-                                <input type="text" id="lname" name="lname" placeholder="Nachname Elternteil" />
+                                <input type="text" id="lname" name="lname" placeholder="Nachname" />
                             </div>
                             <div className='Box'>
                                 <label for="email">Email Adresse: </label>
-                                <input type="emailEltern" id="emailEltern" name="emailEltern" placeholder="Email Elternteil" />
+                                <input type="emailEltern" id="emailEltern" name="emailEltern" placeholder="Email" />
                             </div>
                             <div className='Box'>
                                 <label for="pwd">Passwort: </label>
@@ -75,11 +75,11 @@ export default function SettingsAddChild() {
                         <div className="Box2">
                             <div className='Box'>
                                 <label for="fname">Vorname Kind: </label>
-                                <input type="text" id="fname" name="fname" placeholder="Vorname Kind" />
+                                <input type="text" id="fname" name="fname" placeholder="Vorname" />
                             </div>
                             <div className='Box'>
                                 <label for="lname">Nachname Kind: </label>
-                                <input type="text" id="lname" name="lname" placeholder="Nachname Kind" />
+                                <input type="text" id="lname" name="lname" placeholder="Nachname" />
                             </div>
                             <div className='Box'>
                                 <label for="class">Klasse: </label>
@@ -91,7 +91,7 @@ export default function SettingsAddChild() {
                             </div>
                             <div className='Box'>
                                 <label for="emailLehrer">Email Adresse: </label>
-                                <input type="emailLehrer" id="emailLehrer" name="emailLehrer" placeholder="Email Klassenlehrer" />
+                                <input type="emailLehrer" id="emailLehrer" name="emailLehrer" placeholder="Email" />
                             </div>
                         </div>
                     </div>
@@ -102,16 +102,16 @@ export default function SettingsAddChild() {
                     <div className='Schule'>
                         <div className='Box'>
                             <label for="Schule">Schule: </label>
-                            <input onChange={handleChange} value={input.schule} type="text" id="schule" name="school" placeholder="" />
+                            <input onChange={handleChange} value={input.schule} type="text" id="schule" name="school" placeholder="Schule" />
                         </div>
                     </div>
                     <div className='Box'>
                         <label for="fname">Vorname Kind: </label>
-                        <input onChange={handleChange} value={input.fname} type="text" id="fname" name="fname" placeholder="" />
+                        <input onChange={handleChange} value={input.fname} type="text" id="fname" name="fname" placeholder="Vorname" />
                     </div>
                     <div className='Box'>
                         <label for="lname">Nachname Kind: </label>
-                        <input onChange={handleChange} value={input.lname} type="text" id="lname" name="lname" placeholder="" />
+                        <input onChange={handleChange} value={input.lname} type="text" id="lname" name="lname" placeholder="Nachname" />
                     </div>
                     <div className='Box'>
                         <label for="class">Klasse: </label>

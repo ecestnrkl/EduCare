@@ -131,11 +131,15 @@
         margin-left: 40px;
     }
     .l_blue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Fill the entire viewport */
         background-color: #214ddb;
-        bottom:0;
-        width: auto;
-        height: 100px;
+        z-index: -1; /* Ensure it stays behind the content */
     }
+    
     .login{
         padding-top: 50px;
         padding-bottom: 50px;

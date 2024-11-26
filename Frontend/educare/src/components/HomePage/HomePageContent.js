@@ -7,6 +7,7 @@ export default function HomePageContent() {
         <div style={{ backgroundColor: '#214ddb' }}>
         <>
             <div className='homepage'>
+            <div className='blue'></div>
                 <div className='homepage-container'>
                     <img
                         src={content}
@@ -23,7 +24,6 @@ export default function HomePageContent() {
                     <div className="reg"> Noch kein Account? 
                     <Link to="/Register" class="bold-textw"> Registrieren!</Link></div>
                     </div>
-                    <div className='blue'></div>
             </div>
         </>
         </div>
