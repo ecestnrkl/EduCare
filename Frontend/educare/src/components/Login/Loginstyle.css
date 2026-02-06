@@ -1,160 +1,149 @@
-/* Handy Ansicht */
+/* ===========================
+   LOGIN PAGE
+   =========================== */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .login-pic {
-    width: 100%;
+  width: 100%;
+  max-width: 500px;
 }
+
 .loginBox {
-    width: 90%;
-    max-width: 700px;
-    /* box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2); */
-    transition: 0.3s;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    text-align: left;
-    margin: auto;
-    padding: 10px;
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
-    margin-top: -20px;
+  width: 90%;
+  max-width: 700px;
+  transition: 0.3s;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  text-align: left;
+  margin: 0 auto;
+  padding: 24px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  margin-top: -20px;
 }
 
-
-/* Mit Satoshi wäre Schrift dicker */
 .login h1 {
-    margin-top: 20px;
-    /* font-family: "Satoshi", sans-serif; */
+  margin-top: 16px;
+  color: var(--color-text);
 }
 
-.login h1, h2, p, .pass, .Title {
-    text-align: left;
+.login h1,
+.login h2,
+.login p,
+.login .pass,
+.login .Title {
+  text-align: left;
 }
 
 .Title {
-    font-weight: bolder;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
 }
 
 .login input {
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid;
-    width: 100%;
-    padding-bottom: 6px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    cursor:caret;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  width: 100%;
+  padding: 8px 0;
+  margin: 4px 0;
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.login input:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
 }
 
 .pass {
-    margin-top: -20px;
-    float: right;
-    font-size: smaller;
-    font-weight: bold;
-    cursor: pointer;
+  margin-top: -12px;
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-text-light);
 }
 
-/* Input */
+/* Input groups */
 .eintrag {
-    text-align: left;
-    padding-bottom: 20px;
+  text-align: left;
+  padding-bottom: 16px;
 }
 
 .Anmelden {
-    line-height: 20px;
-    padding-top: 70px;
-}
-.Anmelden button {
-    cursor:caret;
-    padding-left: 20px;
-    padding: 0.75rem 1.25rem;
-    border-radius: 10rem;
-    background-color: #FF8C1D;
-    border-color: #FF8C1D;
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
+  padding-top: 32px;
+  text-align: center;
 }
 
-.Anmelden button:hover {
-    background-color: #FF8C1D;
-    border-color: #FF8C1D;
-    font-weight: bold;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 8px 3px rgba(58, 38, 7, 0.2);
-    transition: 0.3s;
-  
+/* Sub-text under button */
+.login-subtext {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
 }
 
-.error_msg {
-	width: 370px;
-	padding: 15px;
-	margin: 5px 0;
-	font-size: 14px;
-	background-color: #f34646;
-	color: white;
-	border-radius: 5px;
-	text-align: center;
+.login-subtext-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.login .reg {
-    color: black;
-    font-size: 10px;
-    font-family: "Montserrat", sans-serif;
+.login-subtext-link:hover {
+  text-decoration: underline;
+}
+
+textarea:focus,
+.eintrag input:focus {
+  outline: none;
+}
+
+/* --- Desktop --- */
+@media screen and (min-width: 800px) {
+  .login-pic {
+    width: 37%;
+    height: auto;
+    margin-left: 40px;
+    object-fit: contain;
   }
 
-  .login .reg a{
-    color: black;
-    font-size: 10px;
-    font-family: "Montserrat", sans-serif;
+  .l_blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    z-index: -1;
   }
 
-  .bold-text {
-    font-weight: bold;
-    cursor:caret;
-  }
-  
-  .reg, .bold-text {
-    display: inline-end;
-    margin: 0;
-    padding: 0; 
-  }  
-
-  textarea:focus, .eintrag input:focus{
-    outline: none;
+  .login {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
   }
 
-
-  /* Laptop Ansicht */
-  @media screen and (min-width:800px) {
-    .login-pic {
-        width: 37%;
-        height: 37%;
-        margin-left: 40px;
-    }
-    .l_blue {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; /* Fill the entire viewport */
-        background-color: #214ddb;
-        z-index: -1; /* Ensure it stays behind the content */
-    }
-    
-    .login{
-        padding-top: 50px;
-        padding-bottom: 50px;
-        display: flex;
-    }
-    .Anmelden{
-        padding-top: 0px;
-        margin-top: 40px;
-        margin-bottom: 10px;
-    }    
-    .loginBox {
-        margin-top: 7px;
-        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
-        width: 40%;
-        padding: 30px;
-        margin-bottom: 50px;
-    }
+  .Anmelden {
+    padding-top: 24px;
+    margin-top: 16px;
   }
+
+  .loginBox {
+    margin-top: 7px;
+    box-shadow: var(--shadow-md);
+    width: 40%;
+    padding: 32px;
+    margin-bottom: 50px;
+  }
+}

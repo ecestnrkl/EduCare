@@ -1,192 +1,104 @@
-.login {
-  display: grid;
+/* ===========================
+   HOMEPAGE – Hero Screen
+   =========================== */
+
+.homepage {
+  background-color: var(--color-primary);
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 2.5rem 1.5rem 3rem;
 }
 
-/* Handy-Ansicht */
-.HomePageContent {
+/* --- Hero wrapper: side-by-side on desktop --- */
+.homepage-hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+/* --- Left: copy block --- */
+.homepage-copy {
   text-align: center;
-  color: rgb(255, 255, 255);
-  border-left: 4px solid var(--theme-col);
-  font-size: 2.2rem;
-  line-height: 2.25rem;
+}
+
+.homepage-headline {
+  color: var(--color-white) !important;
+  font-size: 1.55rem;
   font-weight: 800;
-  margin-top: 30px;
-  margin-bottom: 0px;
+  line-height: 1.45;
+  margin: 0 0 12px;
 }
 
-.homepage-container{
-  overflow: hidden;
+.homepage-sub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-.homepage h1 {
-  color: white !important;
-  text-align: left;
-  padding-left: 30px;
+.homepage-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.homepage-content {
+.homepage-reg-btn {
+  background-color: transparent !important;
+  color: var(--color-white) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.homepage-reg-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--color-white) !important;
+}
+
+/* --- Right: illustration --- */
+.homepage-visual {
+  flex-shrink: 0;
+}
+
+.homepage-img {
+  width: 220px;
   height: auto;
-  width: 500px;
-  transform: translate(-30px, 20px);
-  margin-bottom: 0px;
-
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2));
 }
 
-.register {
-  margin-right: 15px;
-  margin-top: 15px;
-  float: right;
-  justify-content: right;
-  line-height: 40px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.reg {
-  color: white;
-  font-size: 10px;
-}
-
-
-.bold-textw {
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-
-.reg, .bold-text {
-  display: inline-end;
-  margin: 0;
-  padding: 0; 
-}  
-
-/* animierten button */
-.wutton {
-  cursor: pointer;
-  padding-left: 20px;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10rem;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.15rem;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  text-decoration: none;
-  margin: 20px;
-  margin-bottom: 0;
-}
-
-.wutton:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff9225;
-  border-radius: 10rem;
-  z-index: -2;
-}
-
-.wutton:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: dodgerblue;
-  transition: all 0.3s;
-  border-radius: 10rem;
-  z-index: -1;
-  overflow: hidden;
-
-}
-
-.wutton:hover {
-  color: white;
-}
-
-.wutton:hover:before {
-  width: 100%;
-}
-
-.homepage .blue {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Cover the entire page */
-  background-color: #214ddb;
-  z-index: -1; /* Push it behind content */
-}
-
-/* für laptop */
-@media screen and (min-width:800px) {
-  .homepage-content {
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    width: 550px;
-    transform: translate(-30px, 40px);
-    margin-bottom: 0px;
-    z-index: 1;
-    padding-bottom: 80px;
+/* ============ Desktop ============ */
+@media screen and (min-width: 800px) {
+  .homepage-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
   }
 
-  .homepage h1 {
-    padding-left: 30px;
-    font-size: 1.5rem;
-    translate: 100px;
-    margin-top: -40px;
-    line-height: 1.0rem;
-
+  .homepage-copy {
+    text-align: left;
+    flex: 1;
   }
 
-  .register {
-    line-height: 40px;
-    position: relative;
-    translate: -170px;
-    margin-top: -100px;
-
+  .homepage-headline {
+    font-size: 2.1rem;
+    line-height: 1.35;
+    margin-bottom: 16px;
   }
 
-  .reg {
-    color: white;
-    font-size: 10px;
+  .homepage-sub {
+    font-size: 1.05rem;
+    max-width: 400px;
   }
 
-  /* animierten button */
-  .wutton {
-    cursor: pointer;
-    padding-left: 20px;
-    padding: 0.75rem 1.25rem;
-    border-radius: 10rem;
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    text-decoration: none;
-    margin: 20px;
-    margin-bottom: 0;
+  .homepage-actions {
+    justify-content: flex-start;
   }
-  
-  .wutton:after {
-    background-color: #ff9225;
-  }
-  
-  .wutton:before {
-    background-color: dodgerblue;
+
+  .homepage-img {
+    width: 320px;
   }
 }
-
-

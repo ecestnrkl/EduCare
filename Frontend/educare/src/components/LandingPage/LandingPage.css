@@ -1,97 +1,48 @@
+/* ===========================
+   LANDING PAGE
+   =========================== */
+
 .landingpagecontent {
   width: 90%;
-  max-width: 900px;
-  transition: 0.3s;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  max-width: 700px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
   text-align: left;
-  margin: auto;
-  padding-top: 1rem;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-
-.LpText {
-  color: black;
-  margin: 30px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 2.25rem;
+  margin: 0 auto 80px;
+  padding: 24px;
+  font-family: var(--font-main);
 }
 
 .landingpagecontent h1 {
-  margin: 30px;
+  margin: 16px 24px;
+  color: var(--color-text);
 }
 
 .LandingText {
-  color: black;
-  margin: 15px;
-  text-align: left;
-  hyphens: auto; 
-	text-align: justify;
+  color: var(--color-text);
+  margin: 16px 24px;
+  text-align: justify;
+  hyphens: auto;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .landingpage-image {
   width: 40%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.Calendar,
-.Reports {
-  float: left;
-  display: block;
-}
-
-.Wrapper {
-  justify-content: center;
-  gap: 20px;
-}
-
-.linky {
-  text-decoration: none;
-  color: black;
-}
-.binky {
-  text-decoration: none;
-  color: white;
-}
-
-.lutton button {
-  padding: 10px 30px;
-  background-color: white !important;
-  color: black;
-  border: 3px solid #ADCCED !important;
-  cursor: pointer;
-  border-radius: 40px;
-  align-self: center;
-  margin-top: 20px;
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  left: 410px;
-  top: -61px;
-}
-
-.lutton button:hover {
-  background-color: #ADCCED !important;
-}
-
-/* Handy */
-
-@media screen and (max-width:800px) {
+/* --- Mobile --- */
+@media screen and (max-width: 800px) {
   .landingpagecontent h1 {
-    margin: 30px;
-    line-height: 30px;
-    font-size: 22px;
+    margin: 16px;
+    line-height: 1.4;
+    font-size: 1.25rem;
   }
 
   .landingpage-image {
-    width: 100%;
+    width: 80%;
   }
-
 }

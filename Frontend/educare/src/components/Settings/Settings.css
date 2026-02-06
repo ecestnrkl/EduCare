@@ -1,151 +1,84 @@
-/* Handy Ansicht*/
+/* ===========================
+   SETTINGS PAGE
+   =========================== */
 
-/* Ab hier Settings Inhalt */
 .TextBox {
-    text-align: left;
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    width: 93%;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  width: 93%;
+  margin: 0 auto 20px;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-white);
 }
 
 .kind {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* SprachOption select für Sprachbutton */
 .TextBox input,
 .SprachOption select {
-    background-color: #ecf9ff;
-    text-align: left;
-    float: right;
-    width: 50%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+  background-color: var(--color-bg-light);
+  text-align: left;
+  float: right;
+  width: 50%;
+  font-family: var(--font-main);
+  font-weight: 600;
 }
 
-
-input:focus {
-    background-color: white;
+.Setting input:focus,
+.SettingsAddChild input:focus {
+  background-color: var(--color-white);
+  outline: 2px solid var(--color-primary);
 }
 
-/* Text LEFT */
 .TextBox .Box,
 .SprachOption {
-    text-align: left;
-    padding-bottom: 15px;
+  text-align: left;
+  padding-bottom: 15px;
 }
 
-/* Text RIGHT */
 .Box input,
 .SprachOption select {
-    text-align: left;
-    padding: 3px;
-    border-radius: 5px;
-    border: none;
-    height: 22px;
-}
-
-/* Box1 und Box2 */
-.Box1 {
-    justify-content: space-evenly;
-}
-
-.Box2 {
-    justify-content: space-evenly;
-}
-
-
-
-
-/* Buttons */
-
-.Wrapper {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 100px;
-}
-
-.AddChild {
-    float: left;
+  text-align: left;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: none;
+  height: 28px;
+  font-size: 0.85rem;
 }
 
 .SettingsAddChild .settings-container {
-    height: fit-content;
-    padding-bottom: 100px;
-}
-
-.SettingsAddChild button {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    background-color: #FF8C1D;
+  height: fit-content;
+  padding-bottom: 100px;
 }
 
 .SettingsAddChild h2 {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-
-.AddChild button {
-    background-color: white !important;
-    color: black;
-    border: 3px solid #ADCCED;
-    font-size: 15px;
-    font-weight: bold;
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-}
-.AddChild button:hover {
-  background-color: #ADCCED !important;
-  transition: 0.2s;
-}
-
-
-/* Halb Laptop Ansicht */
-
+/* --- Desktop --- */
 @media (min-width: 800px) {
-    .TextBox {
-        column-count: 2;
+  .TextBox {
+    column-count: 2;
+    column-gap: 80px;
+    column-width: 150px;
+    display: block;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    width: 60%;
+    margin: 0 auto 20px;
+  }
 
-        column-gap: 100px;
-        column-width: 150px;
-
-        display: block;
-        padding: 30px;
-
-        border-radius: 20px;
-        font-size: 15px;
-
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .TextBox input,
-    .SprachOption select {
-        margin: 2px;
-        text-align: left;
-        width: 150px;
-    }
-
-    .SettingsAddChild button {
-        margin-top: 0px;
-        margin-bottom: 20px;
-        background-color: dodgerblue;
-    }
-
+  .TextBox input,
+  .SprachOption select {
+    margin: 2px;
+    text-align: left;
+    width: 150px;
+  }
 }

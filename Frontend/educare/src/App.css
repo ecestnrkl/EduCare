@@ -1,94 +1,199 @@
-.App {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
+/* ===========================
+   EDUCARE DESIGN SYSTEM
+   =========================== */
+
+:root {
+  --color-primary: #2659F1;
+  --color-primary-dark: #1a47c7;
+  --color-accent: #FF8C1D;
+  --color-accent-hover: #e67d15;
+  --color-light-blue: #ADCCED;
+  --color-bg-light: #ecf9ff;
+  --color-card-bg: #D7E8F7;
+  --color-white: #ffffff;
+  --color-text: #222222;
+  --color-text-light: #666666;
+  --color-error: #f34646;
+  --font-main: "Montserrat", sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 50px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
-.LinkColor {
-  color: #ffffff;
-}
-
-h1 {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  /* Muss man bei indexhtml downloaden */
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
-  font-weight: bolder;
-  line-height: 30%;
-  color: black !important;
-}
-
-* {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+/* --- Reset --- */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-.homepage .login{
-  background-color: #214ddb;
-  height: 100vh;
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: #f5f7fb;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (min-width:800px) {
-  .login {
-    background-color: #214ddb;
-  }
-  .Register {
-    background-color: #214ddb;
-  }
+/* --- App Shell --- */
+.App {
+  text-align: center;
+  font-family: var(--font-main);
 }
 
-@media screen and (max-width:600px) {
-  .Submit button, .Wrapper button {
-    border-color: #FF8C1D;
-  }
-  button {
-    background-color: #FF8C1D !important;
-  }
+.container {
+  min-height: calc(100vh - 4rem);
 }
 
-button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 2px solid dodgerblue;
-  color: white;
-  cursor: pointer;
-  border-radius: 20px;
-  align-self: center;
-  margin-top: 20px;
-  font-size: 15px;
-  font-family: "Montserrat", sans-serif;
-  left: 410px;
-  top: -61px;
-  font-weight: bold;
-
+/* --- Typography --- */
+h1 {
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 24px 0 16px;
 }
 
-.AddChild button {
-  background-color: dodgerblue !important;
-}
-
-button:hover {
-  background-color: #ff9225 !important;
-  border: 2px solid #ff9225;
-  transition: 0.2s;
-}
-
-.Wrapper {
-  /* Float both forms to the left */
-  justify-content: center;
-  /* borders added for visibility. Just remove them */
+h2 {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 16px 0 12px;
 }
 
 p {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Links --- */
+.LinkColor {
+  color: var(--color-white);
+}
+
+/* ===========================
+   BUTTON SYSTEM
+   =========================== */
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 36px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-main);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+  line-height: 1.4;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 4px 16px rgba(255, 140, 29, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 36px;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 2px solid var(--color-light-blue);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-main);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+  line-height: 1.4;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-light-blue);
+  border-color: var(--color-light-blue);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary.active {
+  background-color: var(--color-light-blue);
+  border-color: var(--color-light-blue);
+}
+
+/* Large button variant */
+.btn-lg {
+  padding: 14px 48px;
+  font-size: 1.15rem;
+}
+
+/* Small button variant */
+.btn-sm {
+  padding: 8px 24px;
+  font-size: 0.85rem;
+}
+
+/* Button row */
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+/* ===========================
+   FORM ERROR
+   =========================== */
+.error_msg {
+  max-width: 400px;
+  padding: 12px 16px;
+  margin: 8px auto;
+  font-size: 0.85rem;
+  background-color: var(--color-error);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media screen and (min-width: 800px) {
+  .login {
+    background-color: var(--color-primary);
+  }
+  .Register {
+    background-color: var(--color-primary);
+  }
 }

@@ -1,15 +1,72 @@
-# Educare
- [EduCare](https://educaregruppef.onrender.com) ist eine Webanwendung, die für Lehrer und geflüchtete Eltern entwickelt wurde, um die Kommunikation zu verbessern und den Eltern zu helfen, sich stärker in die schulische Entwicklung ihrer Kinder einzubringen.<br>Sie wurde für das Modul "Web" entwickelt wo es darum geht, innerhalb des Semesters eine lauffähige Website für Geflüchtete zu entwickeln und dabei das erworbene Wissen aus anderen Kursen wie Webentwicklung und Research anzuwenden. <br>
+# EduCare – Interkulturelle Schulkommunikation
 
- Hier ist der Link zur [Dokumentation](https://github.com/ecestnrkl/EduCare/blob/main/educare_compressed.pdf)
+EduCare ist eine Webanwendung für die Kommunikation zwischen Lehrern und Eltern. Sie bietet einen Kalender für Schultermine, Krankmeldungen, Befreiungen und Einstellungen für Kinderprofile.
 
- ## App Starten
- Um die Anwendungen starten zu können, muss man sich im Ordner educare befinden und dann npm start ausführen.<br>
- Dafür muss man im Terminal diese commands eingeben:<br><br>
- ```cd Frontend``` <br>
- ```cd educare``` <br>
- ```npm i``` <br>
- ```npm start``` <br>
+## Tech Stack
 
- ## Team Educare
- Unser Team besteht aus Ann-Marie Atzkern, Berfin Berg, Karmen Florentina Bulai, Ilayda Güner und Ece Sutanrikulu<br><br>
+- **Backend:** Node.js, Express, MongoDB (Mongoose), JWT Auth, bcryptjs, Joi Validation
+- **Frontend:** React 18, React Router v6, Axios, React Icons
+
+## Voraussetzungen
+
+- Node.js (v18+)
+- MongoDB (lokal oder [Atlas](https://www.mongodb.com/atlas))
+
+## App starten
+
+### 1. Backend
+
+```bash
+cd Backend
+cp .env.example .env   # Anpassen: DB-URL und JWT_SECRET setzen
+npm install
+npm run dev            # Startet mit nodemon auf Port 3001
+```
+
+### 2. Frontend
+
+```bash
+cd Frontend/educare
+npm install
+npm start              # Startet auf Port 3000
+```
+
+## Projektstruktur
+
+```
+EduCare/
+├── Backend/
+│   ├── middleware/auth.js          # JWT Auth Middleware
+│   ├── models/userModel.js        # User Schema + Auth Methoden
+│   ├── routes/user.js             # API Routes (Register, Login, Logout)
+│   ├── server.js                  # Express Server
+│   ├── .env.example               # Umgebungsvariablen Vorlage
+│   └── package.json
+├── Frontend/educare/
+│   ├── src/
+│   │   ├── api.js                 # Axios Instance mit Interceptors
+│   │   ├── context/AuthContext.js  # Auth State Management (React Context)
+│   │   ├── components/            # UI Komponenten
+│   │   │   ├── Calendar/          # Dynamischer Kalender
+│   │   │   ├── Login/             # Login-Formular
+│   │   │   ├── Register/          # Registrierung mit Rollenwahl
+│   │   │   ├── ReportsPage/       # Krankmeldung & Befreiung
+│   │   │   ├── Settings/          # Einstellungen & Kind hinzufügen
+│   │   │   └── ProtectedRoute.js  # Auth-geschützte Routen
+│   │   └── pages/                 # Seiten-Wrapper
+│   └── public/
+└── README.md
+```
+
+## API Endpunkte
+
+| Methode | Route          | Beschreibung       | Auth |
+|---------|----------------|--------------------|------|
+| POST    | /user/register | Registrierung      | ❌   |
+| POST    | /user/login    | Anmeldung          | ❌   |
+| POST    | /user/logout   | Abmeldung          | ✅   |
+| GET     | /user/me       | Profil abrufen     | ✅   |
+
+## Team Educare
+
+Ann-Marie Atzkern, Berfin Berg, Karmen Florentina Bulai, Ilayda Güner und Ece Sutanrikulu

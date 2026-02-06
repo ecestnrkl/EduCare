@@ -1,37 +1,34 @@
-import React, {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import api from "../../api";
 
-function addedChildInfos() {
-    const [addedChildInfos, setAddedChildInfos] = useState([{
-        school: '',
-        fname: '',
-        lname: '',
-        klasse: '',
-        teacher: '',
-        email: ''
-    }])
+function AddedChildInfos() {
+  const [childInfos, setChildInfos] = useState([]);
+  const { t } = useTranslation();
 
-    useEffect(() => {
-        fetch('/addedChildInfos').then(res => {
-            if(res.ok) {
-                return res.json()
-            }
-        }).then(jsonRes => setAddedChildInfos(jsonRes));
-    })
+  useEffect(() => {
+    api
+      .get("/user/children")
+      .then((res) => setChildInfos(res.data))
+      .catch((err) => console.error("Error fetching children:", err));
+  }, []);
 
-    return <div className='container'>
-        <h1>Added Child</h1>
-        {addedChildInfos.map(addedChildInfo =>
-            <div>
-                <p>addedChildInfo.school</p>
-                <p>addedChildInfo.fname</p>
-                <p>addedChildInfo.lname</p>
-                <p>addedChildInfo.klasse</p>
-                <p>addedChildInfo.teacher</p>
-                <p>addedChildInfo.email</p>
-            </div>
-        )}
-
+  return (
+    <div className="container">
+      <h1>{t("settings.savedChildren")}</h1>
+      {childInfos.length === 0 && <p>{t("settings.noChildren")}</p>}
+      {childInfos.map((child, index) => (
+        <div key={index}>
+          <p>{child.school}</p>
+          <p>{child.fname}</p>
+          <p>{child.lname}</p>
+          <p>{child.klasse}</p>
+          <p>{child.teacher}</p>
+          <p>{child.email}</p>
+        </div>
+      ))}
     </div>
+  );
 }
 
-export default addedChildInfos;
+export default AddedChildInfos;

@@ -1,64 +1,75 @@
-const router = require('express').Router()
-const User = require('../models/userModel.js');
-const auth = require('../middleware/auth.js');
+const router = require("express").Router();
+const Joi = require("joi");
+const User = require("../models/userModel.js");
+const auth = require("../middleware/auth.js");
 
-
-router.post('/register', async (req, res) => {
-    const user = new User(req.body)
-    try {
-        const token = await user.generateAuthToken()
-        res.status(201).send({ user, token })
-    } catch (err) {
-        res.status(400).send({ message: err.message })
-    }
-})
-
-router.post('/login', async (req, res) => {
-    try {
-        const user = await User.findByCredentials(req.body.email, req.body.password);
-        if (!user) {
-            return res.status(401).send({ error: 'Ups, Login failed!' });
-        }
-        const token = await user.generateAuthToken();
-        res.send({ user, token });
-    } catch (err) {
-        res.status(400).send({ message: err.message });
-    }
+// Validation schemas
+const registerSchema = Joi.object({
+  fname: Joi.string().trim().required().label("Vorname"),
+  lname: Joi.string().trim().required().label("Nachname"),
+  email: Joi.string().email().required().label("Email"),
+  password: Joi.string().min(8).required().label("Passwort"),
+  role: Joi.string().valid("parent", "teacher").default("parent").label("Rolle"),
 });
 
-router.get('/logout', auth, async (req, res) => {
-    try {
-      req.user.tokens = req.user.tokens.filter((token) => token.token !== req.token);
-      await req.user.save();
-      res.status(200).send({message:"Logged out successfully"})
-    } catch (err) {
-      res.status(401).send
-    }
+const loginSchema = Joi.object({
+  email: Joi.string().email().required().label("Email"),
+  password: Joi.string().required().label("Passwort"),
 });
 
-/*
-router.post('/activation', userCtrl.activateEmail)
+// Register
+router.post("/register", async (req, res) => {
+  try {
+    const { error } = registerSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
 
-router.post('/login', userCtrl.login)
+    const existingUser = await User.findOne({ email: req.body.email });
+    if (existingUser) {
+      return res.status(409).json({ message: "Ein Account mit dieser Email existiert bereits" });
+    }
 
-router.post('/refresh_token', userCtrl.getAccessToken)
+    const user = new User(req.body);
+    const token = await user.generateAuthToken();
+    res.status(201).json({ user, token });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
-router.post('/forgot', userCtrl.forgotPassword)
+// Login
+router.post("/login", async (req, res) => {
+  try {
+    const { error } = loginSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
 
-router.post('/reset', auth, userCtrl.resetPassword)
+    const user = await User.findByCredentials(req.body.email, req.body.password);
+    const token = await user.generateAuthToken();
+    res.json({ user, token });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
-router.get('/infor', auth, userCtrl.getUserInfor)
+// Logout
+router.post("/logout", auth, async (req, res) => {
+  try {
+    req.user.tokens = req.user.tokens.filter(
+      (tokenObj) => tokenObj.token !== req.token
+    );
+    await req.user.save();
+    res.json({ message: "Erfolgreich abgemeldet" });
+  } catch (err) {
+    res.status(500).json({ message: "Fehler beim Abmelden" });
+  }
+});
 
-router.get('/all_infor', auth, authAdmin, userCtrl.getUsersAllInfor)
+// Get current user profile
+router.get("/me", auth, async (req, res) => {
+  res.json({ user: req.user });
+});
 
-router.get('/logout', userCtrl.logout)
-
-router.patch('/update', auth, userCtrl.updateUser)
-
-router.patch('/update_role/:id', auth, authAdmin, userCtrl.updateUsersRole)
-
-router.delete('/delete/:id', auth, authAdmin, userCtrl.deleteUser)
-*/
-
-
-module.exports = router
+module.exports = router;

@@ -1,35 +1,35 @@
-import "./ReportsPage.css"
-import React from "react"
-import { Link } from 'react-router-dom'
+import "./ReportsPage.css";
+import { useTranslation } from "react-i18next";
 
 export default function SickNote() {
-    return (
-        <div>
-            <form className="krankmeldung">
-                <div className="balke">
-                    <div className="tag">
-                        <label for="input">Von: </label>
-                        <label for="input">Bis: </label>
-                        <label for="input">Grund: </label>
-                    </div>
-                    <div className="tag-input">
-                        <input type="text" id="datumAnfang" className="auswahl" placeholder="TT/MM/JJJJ" />
-                        <input type="text" id="datumEnde" className="auswahl" placeholder="TT/MM/JJJJ" />
-                        <select id="Grund1" className="Grund1">
-                            <option value="auswählen">Auswählen</option>
-                            <option value="erkältung">Erkältung</option>
-                            <option value="covid">Covid-Symptome</option>
-                            <option value="magen">Magen Darm Virus</option>
-                        </select>
-                    </div>
-                </div>
+  const { t } = useTranslation();
 
-                <div className="Wrapper">
-                    <Link to="/ClassExemption">
-                        <button type="submit" >Speichern</button>
-                    </Link>                    
-                    </div>
-            </form>
+  return (
+    <div>
+      <form className="krankmeldung">
+        <div className="form-card">
+          <div className="form-group">
+            <label htmlFor="datumAnfang">{t("reports.from")}</label>
+            <input type="date" id="datumAnfang" className="auswahl" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="datumEnde">{t("reports.to")}</label>
+            <input type="date" id="datumEnde" className="auswahl" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="Grund1">{t("reports.reason")}</label>
+            <select id="Grund1" className="Grund1">
+              <option value="">{t("common.select")}</option>
+              <option value="erkältung">{t("reports.cold")}</option>
+              <option value="covid">{t("reports.covid")}</option>
+              <option value="magen">{t("reports.stomach")}</option>
+            </select>
+          </div>
         </div>
-    )
+        <div className="btn-row">
+          <button type="submit" className="btn-primary">{t("common.save")}</button>
+        </div>
+      </form>
+    </div>
+  );
 }

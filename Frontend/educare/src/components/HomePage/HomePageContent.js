@@ -1,32 +1,32 @@
-import './HomePage.css';
-import content from '../image/HomePageImage.png';
-import { Link } from 'react-router-dom'
+import "./HomePage.css";
+import content from "../image/HomePageImage.png";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function HomePageContent() {
-    return (
-        <div style={{ backgroundColor: '#214ddb' }}>
-        <>
-            <div className='homepage'>
-            <div className='blue'></div>
-                <div className='homepage-container'>
-                    <img
-                        src={content}
-                        className="homepage-content"
-                        alt="content" />
-                    <h1>Interkulturelle</h1>
-                    <h1>Verständigung</h1>
-                    <h1>ist uns wichtig</h1>
-                </div>
+  const { t } = useTranslation();
 
-                <div className='register'>
-                    <Link to="/Login" class="wutton">Anmelden</Link>
-
-                    <div className="reg"> Noch kein Account? 
-                    <Link to="/Register" class="bold-textw"> Registrieren!</Link></div>
-                    </div>
-            </div>
-        </>
+  return (
+    <div className="homepage">
+      <div className="homepage-hero">
+        <div className="homepage-copy">
+          <h1 className="homepage-headline">
+            {t("home.intercultural")}<br />
+            {t("home.understanding")}<br />
+            {t("home.important")}
+          </h1>
+          <p className="homepage-sub">
+            {t("home.noAccount")}
+          </p>
+          <div className="homepage-actions">
+            <Link to="/Login" className="btn-primary btn-lg">{t("home.login")}</Link>
+            <Link to="/Register" className="btn-secondary btn-lg homepage-reg-btn">{t("home.registerLink")}</Link>
+          </div>
         </div>
-
-    )
+        <div className="homepage-visual">
+          <img src={content} className="homepage-img" alt="EduCare" />
+        </div>
+      </div>
+    </div>
+  );
 }

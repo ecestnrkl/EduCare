@@ -1,22 +1,24 @@
-/* Grundlegende Gestaltung für den Footer */ 
+/* ===========================
+   FOOTER
+   =========================== */
+
 .site-footer {
-  font-size: 1rem; 
-  background-color: rgb(38, 89, 241);
-  color: white; 
-  text-align: right; 
-  padding: 0.5rem;
+  font-size: 0.85rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: right;
+  padding: 0.5rem 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 4;
 }
 
-/* Die Navigation im Fußbereich */   
 .footer-nav ul {
   display: flex;
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-nav li {
@@ -25,11 +27,11 @@
 }
 
 .site-footer a {
-  color: var(--color-base-light, white); 
-  text-decoration: none; 
+  color: var(--color-white);
+  text-decoration: none;
 }
 
-.site-footer a:hover, 
+.site-footer a:hover,
 .site-footer a:focus {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
