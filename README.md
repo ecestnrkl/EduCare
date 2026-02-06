@@ -66,12 +66,12 @@ EduCare/
 
 ## API Endpunkte
 
-| Methode | Route          | Beschreibung       | Auth |
-|---------|----------------|--------------------|------|
-| POST    | /user/register | Registrierung      | ❌   |
-| POST    | /user/login    | Anmeldung          | ❌   |
-| POST    | /user/logout   | Abmeldung          | ✅   |
-| GET     | /user/me       | Profil abrufen     | ✅   |
+| Methode | Route          | Beschreibung       | Auth erforderlich |
+|---------|----------------|--------------------|-------------------|
+| POST    | /user/register | Registrierung      | Nein (öffentlich) |
+| POST    | /user/login    | Anmeldung          | Nein (öffentlich) |
+| POST    | /user/logout   | Abmeldung          | ✅ Ja             |
+| GET     | /user/me       | Profil abrufen     | ✅ Ja             |
 
 ## Team Educare
 
