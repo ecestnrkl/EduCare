@@ -5,7 +5,9 @@ EduCare ist eine Webanwendung für die Kommunikation zwischen Lehrern und Eltern
 ## Tech Stack
 
 - **Backend:** Node.js, Express, MongoDB (Mongoose), JWT Auth, bcryptjs, Joi Validation
-- **Frontend:** React 18, React Router v6, Axios, React Icons
+- **Frontend:** React 18, React Router v6, Axios, React Icons, react-i18next
+- **i18n:** 6 Sprachen – Deutsch (Standard), Englisch, Türkisch, Arabisch (RTL), Ukrainisch, Französisch
+- **Design System:** CSS Custom Properties, einheitliches Button-System (`.btn-primary`, `.btn-secondary`)
 
 ## Voraussetzungen
 
@@ -45,13 +47,17 @@ EduCare/
 ├── Frontend/educare/
 │   ├── src/
 │   │   ├── api.js                 # Axios Instance mit Interceptors
+│   │   ├── App.css                # Design System (CSS Custom Properties)
 │   │   ├── context/AuthContext.js  # Auth State Management (React Context)
+│   │   ├── locales/               # Übersetzungen (de, en, tr, ar, uk, fr)
+│   │   ├── i18n.js                # i18next Konfiguration
 │   │   ├── components/            # UI Komponenten
-│   │   │   ├── Calendar/          # Dynamischer Kalender
+│   │   │   ├── Calendar/          # Dynamischer Kalender (CSS Grid)
 │   │   │   ├── Login/             # Login-Formular
 │   │   │   ├── Register/          # Registrierung mit Rollenwahl
 │   │   │   ├── ReportsPage/       # Krankmeldung & Befreiung
 │   │   │   ├── Settings/          # Einstellungen & Kind hinzufügen
+│   │   │   ├── LanguageSwitcher/  # Sprachwechsel-Dropdown
 │   │   │   └── ProtectedRoute.js  # Auth-geschützte Routen
 │   │   └── pages/                 # Seiten-Wrapper
 │   └── public/

@@ -1,12 +1,21 @@
-# Educare
-[EduCare](https://educaregruppef.onrender.com) ist eine Webanwendung, die für Lehrer und geflüchtete Eltern entwickelt wurde, um die Kommunikation zu verbessern und den Eltern zu helfen, sich stärker in die schulische Entwicklung ihrer Kinder einzubringen.<br>Sie wurde für das Modul "Web" entwickelt wo es darum geht, innerhalb des Semesters eine lauffähige Website für Geflüchtete zu entwickeln und dabei das erworbene Wissen aus anderen Kursen wie Webentwicklung und Research anzuwenden. <br>
+# EduCare – Frontend
 
-## App Starten
-Um die Anwendungen starten zu können, muss man sich im Ordner educare befinden und dann npm start ausführen.<br>
-Dafür muss man im Terminal diese commands eingeben:<br><br>
-```cd Frontend``` <br>
-```cd educare``` <br>
-```npm start``` <br>
+React 18 Frontend der EduCare-App.
 
-## Team Educare
-Unser Team besteht aus Ann-Marie Atzkern, Berfin Berg, Karmen Florentina Bulai, Ilayda Güner und Ece Sutanrikulu<br><br>
+## Starten
+
+```bash
+npm install
+npm start      # http://localhost:3000
+```
+
+> **Hinweis:** Der Backend-Server muss auf Port 3001 laufen. Siehe [Haupt-README](../../README.md) für die vollständige Anleitung.
+
+## Features
+
+- JWT-basierte Authentifizierung (Login, Registrierung, geschützte Routen)
+- 6 Sprachen: 🇩🇪 Deutsch, 🇬🇧 Englisch, 🇹🇷 Türkisch, 🇸🇦 Arabisch (RTL), 🇺🇦 Ukrainisch, 🇫🇷 Französisch
+- Einheitliches Design System mit CSS Custom Properties
+- Dynamischer Kalender mit CSS Grid
+- Krankmeldung & Befreiungsantrag
+- Einstellungen (Kind hinzufügen)
